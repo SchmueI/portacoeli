@@ -67,6 +67,14 @@ func open_preview(gameID:String):
 	var startbutton = popup.get_next_button()
 	startbutton.position = Vector2(660,650)
 	startbutton.clicked.connect(func():launch_game("res://scenes/herbarium/herbarium.tscn"))
+	
+	var preview = load(Previews.new().get_preview(gameID)).instantiate()
+	preview.position = Vector2(650, 440)
+	preview.scale = Vector2(1.8, 1.8)
+	preview.play("default")
+	
+	popup.add_child(preview)
+	
 
 func launch_game(scene:String):
 	var sc : PackedScene = load(scene)
