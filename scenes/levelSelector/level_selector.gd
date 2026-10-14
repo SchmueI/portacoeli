@@ -49,6 +49,24 @@ func open_implementation_missing_popup():
 	$PopupController.init_popup(
 	TEXT[lang]["missing"], 
 	TEXT[lang]["missing_text"])
+	
+func open_preview(gameID:String):
+	if $PopupController.heavy_opened(): return
+	var popup : NotificationPopup = $PopupController.init_popup(
+		TEXT[lang][gameID]["title"],
+		TEXT[lang][gameID]["description"],
+		{
+			"pos":Vector2(520, 270),
+			"sourcePos":Vector2(1290, 730),
+			"heavy":true,
+			"timed":false,
+			"scale":Vector2(0.6, 0.6)
+		}
+	)
+	popup.previous_button_visible(false)
+	var startbutton = popup.get_next_button()
+	startbutton.position = Vector2(660,650)
+	startbutton.clicked.connect(func():launch_game("res://scenes/herbarium/herbarium.tscn"))
 
 func launch_game(scene:String):
 	var sc : PackedScene = load(scene)
@@ -60,7 +78,7 @@ func _on_button_back_clicked() -> void:
 	launch_game("res://scenes/mainMenue/mainMenue.tscn")
 
 func _on_herbarium_button_clicked() -> void:
-	launch_game("res://scenes/herbarium/herbarium.tscn")
+	open_preview("herbarium")
 
 func _on_map_moved() -> void:
 	savemanager.modify_data({"mapposition":$Map.position})
