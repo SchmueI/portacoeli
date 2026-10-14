@@ -24,15 +24,21 @@ var menue = {
 var level_selector = {
 	"ger": {
 		"map":"Karte",
-		"hint":"Bewege die Karte mit der Maus oder dem Finger"
+		"hint":"Bewege die Karte mit der Maus oder dem Finger",
+		"missing":"Nicht verfügbar",
+		"missing_text":"Dieses Level ist noch nicht verfügbar. Schau später wieder vorbei!"
 	},
 	"eng":{
 		"map":"Map",
-		"hint":"Move the map with mouse or finger"
+		"hint":"Move the map with mouse or finger",
+		"missing":"Not available",
+		"missing_text":"This level is not available yet. Check back later!"
 	},
 	"fr":{
 		"map":"Carte",
-		"hint":"Déplace la carte à la souris ou au doigt"
+		"hint":"Déplace la carte à la souris ou au doigt",
+		"missing":"Indisponible",
+		"missing_text":"Ce niveau n'est pas encore disponible. Reviens plus tard !"
 	}
 }
 
