@@ -26,19 +26,31 @@ var level_selector = {
 		"map":"Karte",
 		"hint":"Bewege die Karte mit der Maus oder dem Finger",
 		"missing":"Nicht verfügbar",
-		"missing_text":"Dieses Level ist noch nicht verfügbar. Schau später wieder vorbei!"
+		"missing_text":"Dieses Level ist noch nicht verfügbar. Schau später wieder vorbei!",
+		"herbarium":{
+			"title":"Herbarium",
+			"description":"Die Klosterkräuter sind völlig durcheinandergeraten! Kannst Du dabei helfen, wieder Ordnung ins klösterliche Herbarium zu bringen?"
+		}
 	},
 	"eng":{
 		"map":"Map",
 		"hint":"Move the map with mouse or finger",
 		"missing":"Not available",
-		"missing_text":"This level is not available yet. Check back later!"
+		"missing_text":"This level is not available yet. Check back later!",
+		"herbarium":{
+			"title":"Herbarium",
+			"description":"The monastery herbs are in complete disarray! Can you help restore order to the monastery herbarium?"
+		}
 	},
 	"fr":{
 		"map":"Carte",
 		"hint":"Déplace la carte à la souris ou au doigt",
 		"missing":"Indisponible",
-		"missing_text":"Ce niveau n'est pas encore disponible. Reviens plus tard !"
+		"missing_text":"Ce niveau n'est pas encore disponible. Reviens plus tard !",
+		"herbarium":{
+			"title":"Herbier",
+			"description":"Les herbes du monastère sont complètement en désordre ! Peux-tu aider à remettre de l'ordre dans l'herbier du monastère ?"
+		}
 	}
 }
 
