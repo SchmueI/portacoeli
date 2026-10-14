@@ -48,11 +48,7 @@ func open_hint_popup():
 func open_implementation_missing_popup():
 	$PopupController.init_popup(
 	TEXT[lang]["missing"], 
-	TEXT[lang]["missing_text"],
-	{"timed":true,
-	"heavy":false,
-	"duration": 6.5,
-	"scale":Vector2(0.35, 0.35)})
+	TEXT[lang]["missing_text"])
 
 func launch_game(scene:String):
 	var sc : PackedScene = load(scene)
