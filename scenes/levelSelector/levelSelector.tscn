@@ -2,10 +2,14 @@
 
 [ext_resource type="Script" uid="uid://bc4hgx7i2wgug" path="res://scenes/levelSelector/level_selector.gd" id="1_pynul"]
 [ext_resource type="PackedScene" uid="uid://ce02ylexoh48d" path="res://scenes/levelSelector/Map.tscn" id="2_3ea80"]
-[ext_resource type="PackedScene" uid="uid://c8034g2vyqoyq" path="res://scenes/levelSelector/herbariumButton.tscn" id="3_f5eck"]
+[ext_resource type="PackedScene" uid="uid://c8034g2vyqoyq" path="res://scenes/levelSelector/buttons/herbariumButton.tscn" id="3_f5eck"]
 [ext_resource type="PackedScene" uid="uid://bhks47v7gvqbb" path="res://scenes/interface/buttonBack.tscn" id="4_f5eck"]
+[ext_resource type="PackedScene" uid="uid://c5unr1nyk84yo" path="res://scenes/levelSelector/buttons/appleButton.tscn" id="5_jq06b"]
 [ext_resource type="Script" uid="uid://c1wlc7s55wjt3" path="res://scripts/classes/MovementController.gd" id="5_pffpo"]
 [ext_resource type="Script" uid="uid://d37nqnwk7llc2" path="res://scripts/classes/PopupController.gd" id="6_jq06b"]
+[ext_resource type="PackedScene" uid="uid://ffbuda4h13ky" path="res://scenes/levelSelector/buttons/forrestButton.tscn" id="6_tl3em"]
+[ext_resource type="PackedScene" uid="uid://4jh8awcqojy2" path="res://scenes/levelSelector/buttons/riverButton.tscn" id="7_p2try"]
+[ext_resource type="PackedScene" uid="uid://i4qdxuufxnh5" path="res://scenes/levelSelector/buttons/sheepButton.tscn" id="8_r1gk4"]
 
 [node name="LevelSelector" type="Node2D" unique_id=131580086]
 script = ExtResource("1_pynul")
@@ -18,6 +22,22 @@ position = Vector2(2785, 399)
 [node name="ButtonBack" parent="." unique_id=1161179332 instance=ExtResource("4_f5eck")]
 position = Vector2(1202.0001, 86.00001)
 scale = Vector2(0.18, 0.18)
+
+[node name="AppleButton" parent="." unique_id=1980636050 instance=ExtResource("5_jq06b")]
+position = Vector2(577, 2076)
+scale = Vector2(0.08, 0.08)
+
+[node name="ForrestButton" parent="." unique_id=1831271320 instance=ExtResource("6_tl3em")]
+position = Vector2(1766, 1148)
+scale = Vector2(0.08, 0.08)
+
+[node name="RiverButton" parent="." unique_id=814936834 instance=ExtResource("7_p2try")]
+position = Vector2(1620, 222)
+scale = Vector2(0.08, 0.08)
+
+[node name="SheepButton" parent="." unique_id=676039394 instance=ExtResource("8_r1gk4")]
+position = Vector2(3344, -214)
+scale = Vector2(0.08, 0.08)
 
 [node name="MovementController" type="Node" parent="." unique_id=234157255]
 script = ExtResource("5_pffpo")
