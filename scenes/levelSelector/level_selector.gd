@@ -60,10 +60,7 @@ func _on_button_back_clicked() -> void:
 	launch_game("res://scenes/mainMenue/mainMenue.tscn")
 
 func _on_herbarium_button_clicked() -> void:
-	var HerbariumScene : PackedScene = load("res://scenes/herbarium/herbarium.tscn")
-	var herbarium = HerbariumScene.instantiate()
-	get_parent().add_child(herbarium)
-	queue_free()
+	launch_game("res://scenes/herbarium/herbarium.tscn")
 
 func _on_map_moved() -> void:
 	savemanager.modify_data({"mapposition":$Map.position})
