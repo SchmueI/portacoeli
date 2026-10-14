@@ -10,7 +10,7 @@ metadata/_custom_type_script = "uid://dppjvot3bqvcf"
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1671568212]
 texture = ExtResource("2_ufnc7")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=6349500]
+[node name="TouchArea" type="Area2D" parent="." unique_id=6349500]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1028076958]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TouchArea" unique_id=1028076958]
 polygon = PackedVector2Array(199, 2028, 1420, -101, 1493, -691, 1335, -1298, 976, -1709, 362, -2067, 12, -2079, -595, -2006, -1209, -1517, -1527, -683, -1437, -251, -220, 2007, -90, 2064)

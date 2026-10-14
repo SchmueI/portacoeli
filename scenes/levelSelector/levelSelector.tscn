@@ -19,23 +19,23 @@ script = ExtResource("1_pynul")
 [node name="HerbariumButton" parent="Map" unique_id=1362527693 instance=ExtResource("3_f5eck")]
 position = Vector2(2785, 399)
 
-[node name="ButtonBack" parent="." unique_id=1161179332 instance=ExtResource("4_f5eck")]
+[node name="ButtonBack" parent="Map" unique_id=1161179332 instance=ExtResource("4_f5eck")]
 position = Vector2(1202.0001, 86.00001)
 scale = Vector2(0.18, 0.18)
 
-[node name="AppleButton" parent="." unique_id=1980636050 instance=ExtResource("5_jq06b")]
+[node name="AppleButton" parent="Map" unique_id=1980636050 instance=ExtResource("5_jq06b")]
 position = Vector2(577, 2076)
 scale = Vector2(0.08, 0.08)
 
-[node name="ForrestButton" parent="." unique_id=1831271320 instance=ExtResource("6_tl3em")]
+[node name="ForrestButton" parent="Map" unique_id=1831271320 instance=ExtResource("6_tl3em")]
 position = Vector2(1766, 1148)
 scale = Vector2(0.08, 0.08)
 
-[node name="RiverButton" parent="." unique_id=814936834 instance=ExtResource("7_p2try")]
+[node name="RiverButton" parent="Map" unique_id=814936834 instance=ExtResource("7_p2try")]
 position = Vector2(1620, 222)
 scale = Vector2(0.08, 0.08)
 
-[node name="SheepButton" parent="." unique_id=676039394 instance=ExtResource("8_r1gk4")]
+[node name="SheepButton" parent="Map" unique_id=676039394 instance=ExtResource("8_r1gk4")]
 position = Vector2(3344, -214)
 scale = Vector2(0.08, 0.08)
 
@@ -49,4 +49,8 @@ metadata/_custom_type_script = "uid://d37nqnwk7llc2"
 
 [connection signal="moved" from="Map" to="." method="_on_map_moved"]
 [connection signal="clicked" from="Map/HerbariumButton" to="." method="_on_herbarium_button_clicked"]
-[connection signal="clicked" from="ButtonBack" to="." method="_on_button_back_clicked"]
+[connection signal="clicked" from="Map/ButtonBack" to="." method="_on_button_back_clicked"]
+[connection signal="clicked" from="Map/AppleButton" to="." method="_on_apple_button_clicked"]
+[connection signal="clicked" from="Map/ForrestButton" to="." method="_on_forrest_button_clicked"]
+[connection signal="clicked" from="Map/RiverButton" to="." method="_on_river_button_clicked"]
+[connection signal="clicked" from="Map/SheepButton" to="." method="_on_sheep_button_clicked"]
