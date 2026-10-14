@@ -77,7 +77,6 @@ func heavy_opened() -> bool :
 func update_queue():
 	var QUEUE = popup_queue.duplicate()
 	for popup in QUEUE:
-		print (popup["pos"])
 		if open_popups.size() < maxPopup:
 			var POPUP	= popup["popup"]
 			var POS		= popup["pos"]
