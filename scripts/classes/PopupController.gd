@@ -19,12 +19,18 @@ func init_popup(
 ) -> NotificationPopup:
 	
 	var pos 		: Vector2 	= options.get("pos", 		inipos)
+	var sourcePos	: Vector2	= options.get("sourcePos", 	Vector2(0,0))
 	var duration 	: float		= options.get("duration", 	5)
 	var timed 		: bool 		= options.get("timed", 		true)
 	var heavy 		: bool 		= options.get("heavy", 		false)
 	var scl  		: Vector2	= options.get("scale",		iniscale)
 
 	var POPUP:PackedScene
+	
+	# Initialisiere kein heavy popup, wenn bereits ein heavy Popup geöffnet ist
+	if heavy:
+		if heavy_opened():
+			return
 	
 	# Wähle den Popup Typ
 	if not heavy: POPUP = load("res://scenes/interface/Popup.tscn")
@@ -33,7 +39,9 @@ func init_popup(
 	
 	# Startposition für die Animation
 	popup.scale = Vector2(0,0)
-	popup.position = Vector2(0,0)
+	popup.position = sourcePos
+	popup.sourcePos = sourcePos
+	popup.heavy = heavy
 	
 	# verknüpfe listener zum schließen
 	popup.close.connect(_on_close_request.bind(popup))
@@ -57,12 +65,19 @@ func init_popup(
 		update_queue()
 	else:
 		open_popup(popup, pos, scl)
+		open_popups.append(popup)
 	
 	return popup
+
+func heavy_opened() -> bool :
+	for popup in open_popups:
+		if popup.heavy: return true
+	return false
 
 func update_queue():
 	var QUEUE = popup_queue.duplicate()
 	for popup in QUEUE:
+		print (popup["pos"])
 		if open_popups.size() < maxPopup:
 			var POPUP	= popup["popup"]
 			var POS		= popup["pos"]
@@ -74,10 +89,11 @@ func update_queue():
 			
 	var index = 0
 	for popup in open_popups:
-		var pos = inipos
-		var relpos : Vector2 = Vector2(pos[0], (pos[1]+(75*index)))
-		if not popup.position == relpos: move_popup(popup, relpos)
-		index = index+1
+		if not popup.heavy:
+			var pos = inipos
+			var relpos : Vector2 = Vector2(pos[0], (pos[1]+(75*index)))
+			if not popup.position == relpos: move_popup(popup, relpos)
+			index = index+1
 
 func open_timed_popup(
 	popup		: Node,
@@ -118,7 +134,7 @@ func close_popup(popup):
 	update_queue()
 	popup.closed.emit()
 	var tween = create_tween()
-	tween.tween_property(popup, "position", Vector2(0,0), inispeed)
+	tween.tween_property(popup, "position", popup.sourcePos, inispeed)
 	
 	tween.parallel().tween_property(popup, "scale", Vector2(0,0), inispeed)
 	tween.tween_callback(popup.queue_free)

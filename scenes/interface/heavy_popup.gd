@@ -31,3 +31,12 @@ func next_button_visible(toggle:bool=true) -> void:
 func back_button_visible(toggle:bool=true) -> void:
 	$ButtonBack.touch_enabled = toggle
 	$ButtonBack.visible = toggle
+	
+func get_previous_button() -> ClickableObject:
+	return $ButtonPrevious
+
+func get_next_button() -> ClickableObject:
+	return $ButtonNext
+	
+func get_back_button() -> ClickableObject:
+	return $ButtonBack
