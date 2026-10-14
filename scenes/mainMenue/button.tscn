@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://frve1k6iq43m"]
+
+[ext_resource type="Script" uid="uid://dppjvot3bqvcf" path="res://scripts/classes/ClickableObject.gd" id="1_yeu4y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnfe8"]
+size = Vector2(72, 15)
+
+[node name="Button" type="Node2D" unique_id=334214023]
+script = ExtResource("1_yeu4y")
+metadata/_custom_type_script = "uid://dppjvot3bqvcf"
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=1379579763]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TouchArea" unique_id=716168786]
+position = Vector2(26, -2.5)
+shape = SubResource("RectangleShape2D_fnfe8")

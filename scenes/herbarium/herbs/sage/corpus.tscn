@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bjedx0cgd7ec5"]
+
+[ext_resource type="Script" uid="uid://p8ai0ko3j3oj" path="res://scripts/classes/DragableObject.gd" id="1_6wimc"]
+[ext_resource type="Texture2D" uid="uid://84mh2ns8vth6" path="res://assets/textures/levels/herbarium/herbs/sage/corpus.png" id="1_8xi5v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nd7b5"]
+size = Vector2(110, 189.25)
+
+[node name="Corpus" type="Node2D" unique_id=1946348268]
+script = ExtResource("1_6wimc")
+metadata/_custom_type_script = "uid://p8ai0ko3j3oj"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1042361837]
+scale = Vector2(2, 2)
+texture = ExtResource("1_8xi5v")
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=324011655]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TouchArea" unique_id=1452715647]
+polygon = PackedVector2Array(-78, -271, -120, -343, -176, -450, -195, -500, -169, -515, -98, -500, -29, -445, 0, -530, 54, -556, 102, -547, 104, -460, 149, -472, 235, -465, 265, -436, 247, -387, 212, -332, 132, -259, 126, -227, 139, -187, 220, -210, 280, -185, 332, -159, 284, -102, 198, -48, 170, -16, 254, -4, 287, 13, 275, 67, 183, 147, 97, 182, 51, 248, 141, 248, 185, 265, 191, 285, 159, 323, 98, 358, 15, 415, 6, 486, -25, 525, -30, 548, -58, 545, -64, 491, -53, 400, -84, 291, -117, 261, -188, 228, -264, 201, -298, 183, -260, 146, -177, 128, -96, 148, -139, 103, -234, 67, -282, 10, -329, -33, -277, -76, -185, -72, -111, -35, -138, -87, -93, -104, -208, -165, -285, -241, -293, -297, -155, -298)
+
+[node name="JointArea" type="Area2D" parent="." unique_id=1901714177]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JointArea" unique_id=1576842753]
+position = Vector2(-37, 555.375)
+shape = SubResource("RectangleShape2D_nd7b5")

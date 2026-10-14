@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ciibmkvlfs65m"]
+
+[ext_resource type="Texture2D" uid="uid://pbe5avw5rc2b" path="res://assets/textures/levels/herbarium/interface/target.png" id="1_w14pk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnfe8"]
+size = Vector2(658.5, 1271.5)
+
+[node name="Target" type="Node2D" unique_id=1979478501]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1613521788]
+scale = Vector2(2, 2)
+texture = ExtResource("1_w14pk")
+
+[node name="TargetArea" type="Area2D" parent="." unique_id=1922495429]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetArea" unique_id=2004309093]
+position = Vector2(2.75, -42.75)
+shape = SubResource("RectangleShape2D_fnfe8")
+
+[node name="Boundaries" type="Polygon2D" parent="." unique_id=909058330]
+position = Vector2(21.880608, 44.484814)
+scale = Vector2(0.77561396, 0.770707)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(-620, -1097, 561, -1110, 539, 865, -604, 870)

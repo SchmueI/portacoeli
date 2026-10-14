@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dq06kmgfuykui"]
+
+[ext_resource type="Script" uid="uid://p8ai0ko3j3oj" path="res://scripts/classes/DragableObject.gd" id="1_4ibm7"]
+[ext_resource type="Texture2D" uid="uid://diowu4dp5edt2" path="res://assets/textures/levels/herbarium/herbs/sage/roots.png" id="1_w5bq2"]
+
+[node name="Roots" type="Node2D" unique_id=1115976982]
+script = ExtResource("1_4ibm7")
+metadata/_custom_type_script = "uid://p8ai0ko3j3oj"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1731750630]
+scale = Vector2(2, 2)
+texture = ExtResource("1_w5bq2")
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=991117864]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TouchArea" unique_id=1058068175]
+polygon = PackedVector2Array(-60, -276, -50, -391, -48, -446, 12, -452, 25, -297, 53, -242, 113, -215, 155, -183, 167, -144, 214, -135, 253, -97, 222, -60, 260, -23, 302, 26, 371, 55, 370, 90, 272, 116, 364, 158, 387, 211, 373, 274, 279, 332, 231, 345, 219, 267, 181, 304, 123, 316, 80, 182, 38, 271, 31, 358, -25, 428, -82, 448, -146, 373, -125, 259, -207, 310, -230, 289, -189, 194, -236, 235, -235, 185, -269, 197, -238, 137, -322, 187, -363, 172, -389, 104, -361, 39, -250, -6, -269, -46, -275, -92, -208, -117, -259, -143)

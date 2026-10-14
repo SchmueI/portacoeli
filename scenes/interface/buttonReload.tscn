@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://e4o3ilqs8ajq"]
+
+[ext_resource type="Script" uid="uid://dppjvot3bqvcf" path="res://scripts/classes/ClickableObject.gd" id="1_f53vu"]
+[ext_resource type="Texture2D" uid="uid://bjvl4lmralbf5" path="res://assets/textures/interface/reload.png" id="2_p5kho"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fnfe8"]
+radius = 186.2713
+
+[node name="ButtonReload" type="Node2D" unique_id=739808759]
+script = ExtResource("1_f53vu")
+metadata/_custom_type_script = "uid://dppjvot3bqvcf"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1947371990]
+scale = Vector2(2, 2)
+texture = ExtResource("2_p5kho")
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=735855377]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TouchArea" unique_id=2110777839]
+scale = Vector2(1.6, 1.6)
+shape = SubResource("CircleShape2D_fnfe8")

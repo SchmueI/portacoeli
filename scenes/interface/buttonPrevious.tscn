@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://mk3gxxlv3g3i"]
+
+[ext_resource type="Script" uid="uid://dppjvot3bqvcf" path="res://scripts/classes/ClickableObject.gd" id="1_hde6x"]
+[ext_resource type="Texture2D" uid="uid://d0jjvwjfl1ywr" path="res://assets/textures/interface/previous.png" id="2_i4tpb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fnfe8"]
+radius = 199.91248
+
+[node name="ButtonPrevious" type="Node2D" unique_id=1631403355]
+script = ExtResource("1_hde6x")
+metadata/_custom_type_script = "uid://dppjvot3bqvcf"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=413077895]
+scale = Vector2(2, 2)
+texture = ExtResource("2_i4tpb")
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=125689840]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TouchArea" unique_id=1780837520]
+scale = Vector2(1.6, 1.6)
+shape = SubResource("CircleShape2D_fnfe8")

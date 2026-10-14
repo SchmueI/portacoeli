@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c7ues6x60fbj0"]
+
+[ext_resource type="Script" uid="uid://p8ai0ko3j3oj" path="res://scripts/classes/DragableObject.gd" id="1_j27kv"]
+[ext_resource type="Texture2D" uid="uid://cgqi0ncp36j5m" path="res://assets/textures/levels/herbarium/herbs/thyme/corpus.png" id="2_8iw2q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnfe8"]
+size = Vector2(114, 202)
+
+[node name="Corpus" type="Node2D" unique_id=636487403]
+script = ExtResource("1_j27kv")
+metadata/_custom_type_script = "uid://p8ai0ko3j3oj"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1824112060]
+scale = Vector2(2, 2)
+texture = ExtResource("2_8iw2q")
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=14768342]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TouchArea" unique_id=1365360684]
+polygon = PackedVector2Array(50, -336, 68, -388, 138, -390, 162, -381, 162, -349, 173, -294, 162, -247, 143, -161, 191, -213, 243, -189, 245, -146, 236, -95, 233, -59, 188, -56, 177, -36, 199, -12, 199, 19, 152, 19, 128, 40, 113, 85, 105, 132, 159, 121, 179, 135, 180, 180, 180, 216, 150, 252, 105, 338, 57, 406, 17, 402, -4, 462, -35, 540, -77, 538, -47, 394, -91, 351, -69, 322, -111, 321, -90, 247, -150, 231, -161, 162, -161, 110, -119, 99, -92, 130, -96, 58, -134, 49, -206, -8, -199, -69, -240, -89, -221, -141, -173, -140, -136, -84, -139, -53, -126, -32, -98, -30, -94, 3, -71, 28, -29, 39, -12, 73, -48, 6, -32, -46, -61, -86, -86, -86, -80, -130, -122, -146, -134, -155, -112, -203, -144, -254, -177, -279, -157, -318, -118, -332, -97, -325, -80, -296, -94, -261, -77, -261, -67, -319, -80, -372, -113, -421, -68, -460, -106, -505, -44, -543, -12, -540, 3, -506, 16, -469, 13, -414)
+
+[node name="JointArea" type="Area2D" parent="." unique_id=839211083]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JointArea" unique_id=1298748230]
+position = Vector2(-48, 523)
+shape = SubResource("RectangleShape2D_fnfe8")

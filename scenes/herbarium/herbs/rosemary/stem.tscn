@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dpt570mxma1cf"]
+
+[ext_resource type="Script" uid="uid://p8ai0ko3j3oj" path="res://scripts/classes/DragableObject.gd" id="1_puixk"]
+[ext_resource type="Texture2D" uid="uid://yjngqr7iesms" path="res://assets/textures/levels/herbarium/herbs/rosemary/stem.png" id="2_wv80h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnfe8"]
+size = Vector2(2758.5, 2066)
+
+[node name="Stem" type="Node2D" unique_id=1319938586]
+script = ExtResource("1_puixk")
+intScale = 0.056
+dragScale = 0.08
+metadata/_custom_type_script = "uid://p8ai0ko3j3oj"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1817462232]
+texture = ExtResource("2_wv80h")
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=396326677]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TouchArea" unique_id=1415392211]
+polygon = PackedVector2Array(-62, 2014, -133, 1935, -122, 1755, -29, 1539, 275, 1213, 594, 914, 875, 556, 983, 211, 1036, -214, 975, -495, 864, -114, 727, 436, 541, 714, 277, 1042, -112, 1490, 52, 1034, 166, 461, 244, -298, 232, -890, 132, -1396, -62, -1882, -123, -1885, -118, -1638, 71, -987, 96, -242, 49, 406, -132, 1012, -235, 1281, -171, 617, -235, 225, -310, -59, -418, -287, -426, -109, -335, 200, -285, 617, -349, 1165, -454, 1265, -596, 1145, -735, 789, -804, 411, -835, -53, -843, -615, -796, -984, -779, -1326, -891, -1134, -955, -592, -985, 0, -946, 489, -779, 1117, -460, 1696, -396, 1843, -151, 2051)
+
+[node name="JointArea" type="Area2D" parent="." unique_id=2094473774]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JointArea" unique_id=1370794231]
+position = Vector2(301.75, -1019)
+shape = SubResource("RectangleShape2D_fnfe8")

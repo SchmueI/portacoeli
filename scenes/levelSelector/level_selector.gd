@@ -1,0 +1,63 @@
+extends Node2D	
+
+var savemanager = SaveManager.new()
+var RNG = RandomNumberGenerator.new()
+var TEXT = preload("res://assets/text/interface/mainMenue/mainMenue.gd").new().level_selector
+var lang = "ger"
+
+func _ready() -> void:
+	lang = savemanager.load_specific("settings", {"lang":"ger"}).get("lang", "ger")
+	var mapposition = converter.string_to_vector2(
+		savemanager.load_specific(
+			"mapposition", 
+			str(Vector2(-990, -575))
+		)
+	)
+	$Map.position = mapposition
+	RNG.randomize()
+	check_init()
+	
+func check_init():
+	if not savemanager.load_specific("mapmoved", false):
+		slide_map()
+		open_hint_popup()
+		savemanager.modify_data({"mapmoved":true})
+		
+func slide_map():
+	var pos = $Map.position
+	var fx = -1
+	var fy = -1
+	if randf_range(-1, 1) > 0: fx = 1
+	if randf_range(-1, 1) > 0: fy = 1
+	var newpos = Vector2(
+		pos[0]+(fx*randf_range(100, 250)), 
+		pos[1]+(fy*randf_range(100, 250))
+	)
+	
+	$MovementController.move_element($Map, newpos, 1.5)
+
+func open_hint_popup():
+	$PopupController.init_popup(
+	TEXT[lang]["map"], 
+	TEXT[lang]["hint"],
+	{"timed":true,
+	"heavy":false,
+	"duration": 6.5,
+	"scale":Vector2(0.35, 0.35)})
+
+func _on_herbarium_button_clicked() -> void:
+	var HerbariumScene : PackedScene = load("res://scenes/herbarium/herbarium.tscn")
+	var herbarium = HerbariumScene.instantiate()
+	get_parent().add_child(herbarium)
+	queue_free()
+
+
+func _on_button_back_clicked() -> void:
+	var HerbariumScene : PackedScene = load("res://scenes/mainMenue/mainMenue.tscn")
+	var herbarium = HerbariumScene.instantiate()
+	get_parent().add_child(herbarium)
+	queue_free()
+
+
+func _on_map_moved() -> void:
+	savemanager.modify_data({"mapposition":$Map.position})

@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://kig4a7jfbrde"]
+
+[ext_resource type="Texture2D" uid="uid://buqxac4b6mybi" path="res://assets/textures/levels/herbarium/background.png" id="1_8cn40"]
+[ext_resource type="Script" uid="uid://dscwhtp2e3y44" path="res://scenes/herbarium/herbarium.gd" id="1_wwwpb"]
+[ext_resource type="PackedScene" uid="uid://e4o3ilqs8ajq" path="res://scenes/interface/buttonReload.tscn" id="7_x5ofh"]
+[ext_resource type="PackedScene" uid="uid://bhks47v7gvqbb" path="res://scenes/interface/buttonBack.tscn" id="8_38s7k"]
+[ext_resource type="Script" uid="uid://c1wlc7s55wjt3" path="res://scripts/classes/MovementController.gd" id="9_djl5n"]
+[ext_resource type="PackedScene" uid="uid://ciibmkvlfs65m" path="res://scenes/herbarium/target/target.tscn" id="9_v4ps5"]
+[ext_resource type="Script" uid="uid://cr02kb8646so3" path="res://scenes/herbarium/classes/TutorialController.gd" id="10_djl5n"]
+[ext_resource type="Script" uid="uid://d37nqnwk7llc2" path="res://scripts/classes/PopupController.gd" id="11_gwwne"]
+[ext_resource type="PackedScene" uid="uid://b4n7vv8mjssy8" path="res://scenes/herbarium/interface/buttonBook.tscn" id="12_0po5q"]
+[ext_resource type="Script" uid="uid://cfnl72cnjjeqc" path="res://scripts/classes/HighlightController.gd" id="12_w4uah"]
+[ext_resource type="Script" uid="uid://cwm2f1k20ids4" path="res://scenes/herbarium/classes/HerbariumController.gd" id="13_5qdp2"]
+[ext_resource type="PackedScene" uid="uid://b41fy4f6aj17b" path="res://scenes/herbarium/interface/buttonCheck.tscn" id="13_ugkig"]
+[ext_resource type="Script" uid="uid://bula58yx8ab4d" path="res://scenes/herbarium/interface/button_check.gd" id="15_5qdp2"]
+
+[node name="Herbarium" type="Node2D" unique_id=2027710954]
+script = ExtResource("1_wwwpb")
+metadata/_custom_type_script = "uid://bfmiqjucse1sp"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1983240029]
+position = Vector2(600.00006, 350)
+scale = Vector2(2, 2)
+texture = ExtResource("1_8cn40")
+
+[node name="SpawnArea" type="Polygon2D" parent="." unique_id=383713349]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(74, 151, 69, 517, 243, 488, 380, 550, 508, 509, 843, 518, 963, 477, 1199, 395, 1199, 263, 832, 255, 832, 18, 269, 28, 277, 88)
+
+[node name="Target" parent="." unique_id=1795348866 instance=ExtResource("9_v4ps5")]
+position = Vector2(628.00006, 307.00003)
+scale = Vector2(0.35, 0.35)
+
+[node name="Herbs" type="Node2D" parent="." unique_id=639362357]
+
+[node name="ButtonBook" parent="." unique_id=1894986160 groups=["UI"] instance=ExtResource("12_0po5q")]
+position = Vector2(182, 614)
+scale = Vector2(0.3, 0.3)
+
+[node name="ButtonCheck" parent="." unique_id=402333780 groups=["UI"] instance=ExtResource("13_ugkig")]
+position = Vector2(1080, 605)
+scale = Vector2(0.3, 0.3)
+script = ExtResource("15_5qdp2")
+
+[node name="ButtonReload" parent="." unique_id=739808759 groups=["UI"] instance=ExtResource("7_x5ofh")]
+position = Vector2(517, 611)
+scale = Vector2(0.18, 0.18)
+
+[node name="ButtonBack" parent="." unique_id=1161179332 groups=["UI"] instance=ExtResource("8_38s7k")]
+position = Vector2(754, 609)
+scale = Vector2(0.18, 0.18)
+
+[node name="ButtonTimer" type="Timer" parent="." unique_id=535674207]
+wait_time = 0.3
+
+[node name="MovementController" type="Node" parent="." unique_id=1073826325]
+script = ExtResource("9_djl5n")
+metadata/_custom_type_script = "uid://c1wlc7s55wjt3"
+
+[node name="TutorialController" type="Node" parent="." unique_id=850342149 node_paths=PackedStringArray("popup_controller", "movement_controller", "highlight_controller", "herbarium")]
+script = ExtResource("10_djl5n")
+popup_controller = NodePath("../PopupController")
+movement_controller = NodePath("../MovementController")
+highlight_controller = NodePath("../HighlightController")
+herbarium = NodePath("..")
+metadata/_custom_type_script = "uid://cr02kb8646so3"
+
+[node name="PopupController" type="Node" parent="." unique_id=1090063720]
+script = ExtResource("11_gwwne")
+metadata/_custom_type_script = "uid://d37nqnwk7llc2"
+
+[node name="HighlightController" type="Node" parent="." unique_id=1522128902]
+script = ExtResource("12_w4uah")
+metadata/_custom_type_script = "uid://cfnl72cnjjeqc"
+
+[node name="HerbariumController" type="Node" parent="." unique_id=1503111356 node_paths=PackedStringArray("herbarium")]
+script = ExtResource("13_5qdp2")
+herbarium = NodePath("..")
+metadata/_custom_type_script = "uid://cwm2f1k20ids4"
+
+[connection signal="clicked" from="ButtonBook" to="." method="_on_button_book_clicked"]
+[connection signal="clicked" from="ButtonCheck" to="." method="_on_check_clicked"]
+[connection signal="clicked" from="ButtonCheck" to="ButtonCheck" method="_on_clicked"]
+[connection signal="clicked" from="ButtonReload" to="." method="_on_button_reload_clicked"]
+[connection signal="clicked" from="ButtonBack" to="." method="_on_button_back_clicked"]
+[connection signal="timeout" from="ButtonTimer" to="ButtonCheck" method="_on_button_timer_timeout"]

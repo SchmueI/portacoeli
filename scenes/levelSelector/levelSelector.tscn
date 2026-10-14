@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dod5c530ewey4"]
+
+[ext_resource type="Script" uid="uid://bc4hgx7i2wgug" path="res://scenes/levelSelector/level_selector.gd" id="1_pynul"]
+[ext_resource type="PackedScene" uid="uid://ce02ylexoh48d" path="res://scenes/levelSelector/Map.tscn" id="2_3ea80"]
+[ext_resource type="PackedScene" uid="uid://c8034g2vyqoyq" path="res://scenes/levelSelector/herbariumButton.tscn" id="3_f5eck"]
+[ext_resource type="PackedScene" uid="uid://bhks47v7gvqbb" path="res://scenes/interface/buttonBack.tscn" id="4_f5eck"]
+[ext_resource type="Script" uid="uid://c1wlc7s55wjt3" path="res://scripts/classes/MovementController.gd" id="5_pffpo"]
+[ext_resource type="Script" uid="uid://d37nqnwk7llc2" path="res://scripts/classes/PopupController.gd" id="6_jq06b"]
+
+[node name="LevelSelector" type="Node2D" unique_id=131580086]
+script = ExtResource("1_pynul")
+
+[node name="Map" parent="." unique_id=864293892 instance=ExtResource("2_3ea80")]
+
+[node name="HerbariumButton" parent="Map" unique_id=1362527693 instance=ExtResource("3_f5eck")]
+position = Vector2(2785, 399)
+
+[node name="ButtonBack" parent="." unique_id=1161179332 instance=ExtResource("4_f5eck")]
+position = Vector2(1202.0001, 86.00001)
+scale = Vector2(0.18, 0.18)
+
+[node name="MovementController" type="Node" parent="." unique_id=234157255]
+script = ExtResource("5_pffpo")
+metadata/_custom_type_script = "uid://c1wlc7s55wjt3"
+
+[node name="PopupController" type="Node" parent="." unique_id=1830223747]
+script = ExtResource("6_jq06b")
+metadata/_custom_type_script = "uid://d37nqnwk7llc2"
+
+[connection signal="moved" from="Map" to="." method="_on_map_moved"]
+[connection signal="clicked" from="Map/HerbariumButton" to="." method="_on_herbarium_button_clicked"]
+[connection signal="clicked" from="ButtonBack" to="." method="_on_button_back_clicked"]

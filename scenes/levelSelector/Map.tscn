@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://ce02ylexoh48d"]
+
+[ext_resource type="Script" uid="uid://p8ai0ko3j3oj" path="res://scripts/classes/DragableObject.gd" id="1_wjt0u"]
+[ext_resource type="Texture2D" uid="uid://dc4y3gmrhcou6" path="res://assets/textures/interface/levelSelector/map_0.png" id="2_g7u62"]
+[ext_resource type="Texture2D" uid="uid://dwllxny7lbmx6" path="res://assets/textures/interface/levelSelector/map_1.png" id="3_2i5mq"]
+[ext_resource type="Texture2D" uid="uid://dgesbu4cixa13" path="res://assets/textures/interface/levelSelector/map_2.png" id="4_2ycic"]
+[ext_resource type="Texture2D" uid="uid://cpqcjdscq831v" path="res://assets/textures/interface/levelSelector/map_3.png" id="5_u5juc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnfe8"]
+size = Vector2(4997, 3533)
+
+[node name="Map" type="Node2D" unique_id=864293892]
+script = ExtResource("1_wjt0u")
+intScale = 1.0
+dragScale = 1.0
+boundary_mode = 2
+metadata/_custom_type_script = "uid://p8ai0ko3j3oj"
+
+[node name="map_0" type="Sprite2D" parent="." unique_id=1894915329]
+position = Vector2(12, 0)
+texture = ExtResource("2_g7u62")
+
+[node name="map_1" type="Sprite2D" parent="." unique_id=1902998894]
+position = Vector2(2492, 0)
+texture = ExtResource("3_2i5mq")
+
+[node name="map_2" type="Sprite2D" parent="." unique_id=2133790914]
+position = Vector2(12, 1753)
+texture = ExtResource("4_2ycic")
+
+[node name="map_3" type="Sprite2D" parent="." unique_id=474392065]
+position = Vector2(2492, 1753)
+texture = ExtResource("5_u5juc")
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=992554753]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TouchArea" unique_id=2041656525]
+position = Vector2(1250, 868)
+shape = SubResource("RectangleShape2D_fnfe8")

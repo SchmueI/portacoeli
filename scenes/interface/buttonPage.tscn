@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bobiflp7wwwnu"]
+
+[ext_resource type="Script" uid="uid://dppjvot3bqvcf" path="res://scripts/classes/ClickableObject.gd" id="1_2hq2k"]
+[ext_resource type="Texture2D" uid="uid://dnpofhq18ve63" path="res://assets/textures/levels/herbarium/book/page_back.png" id="2_8uyty"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnfe8"]
+size = Vector2(526, 549)
+
+[node name="ButtonPage" type="Node2D" unique_id=292711531]
+script = ExtResource("1_2hq2k")
+metadata/_custom_type_script = "uid://dppjvot3bqvcf"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1649142739]
+texture = ExtResource("2_8uyty")
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=547101864]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TouchArea" unique_id=1599972828]
+position = Vector2(4, 2.5)
+shape = SubResource("RectangleShape2D_fnfe8")

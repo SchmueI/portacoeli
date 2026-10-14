@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://6f36cg4q8lum"]
+
+[ext_resource type="Texture2D" uid="uid://bwin07tquwjbw" path="res://assets/textures/interface/popup.png" id="1_ccnqg"]
+[ext_resource type="Script" uid="uid://q6j7s8674df7" path="res://scenes/interface/popup.gd" id="1_rmj34"]
+[ext_resource type="FontFile" uid="uid://d042jllc550q4" path="res://assets/fonts/ModernAntiqua-Regular.ttf" id="2_cv04w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rmj34"]
+size = Vector2(1840, 235)
+
+[node name="Popup" type="Node2D" unique_id=1678124255]
+script = ExtResource("1_rmj34")
+metadata/_custom_type_script = "uid://dcvt5wx5sgfdn"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=562001453]
+position = Vector2(1013, 157)
+scale = Vector2(4, 4)
+texture = ExtResource("1_ccnqg")
+
+[node name="Headline" type="Label" parent="." unique_id=212198116]
+offset_left = 84.0
+offset_top = 64.0
+offset_right = 1936.0
+offset_bottom = 196.0
+theme_override_colors/font_color = Color(0.23529412, 0.24705882, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("2_cv04w")
+theme_override_font_sizes/font_size = 88
+text = "Hinweis"
+horizontal_alignment = 1
+
+[node name="Text" type="Label" parent="." unique_id=1871292212]
+offset_left = 88.0
+offset_top = 177.0
+offset_right = 1936.0
+offset_bottom = 276.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_cv04w")
+theme_override_font_sizes/font_size = 53
+text = "Lorem Ipsum Sed Dolor"
+horizontal_alignment = 1
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=863307581]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TouchArea" unique_id=1576527830]
+position = Vector2(1019, 150.5)
+shape = SubResource("RectangleShape2D_rmj34")
+
+[connection signal="clicked" from="." to="." method="_on_clicked"]

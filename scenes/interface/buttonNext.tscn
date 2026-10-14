@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dlswii4cy80h3"]
+
+[ext_resource type="Script" uid="uid://dppjvot3bqvcf" path="res://scripts/classes/ClickableObject.gd" id="1_tui72"]
+[ext_resource type="Texture2D" uid="uid://bd4n4yqfgh84g" path="res://assets/textures/interface/next.png" id="2_fn3p6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fn3p6"]
+radius = 332.03766
+
+[node name="ButtonNext" type="Node2D" unique_id=2034107673]
+script = ExtResource("1_tui72")
+metadata/_custom_type_script = "uid://dppjvot3bqvcf"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1168233082]
+scale = Vector2(2, 2)
+texture = ExtResource("2_fn3p6")
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=1533524415]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TouchArea" unique_id=598932361]
+scale = Vector2(1.2, 1.2)
+shape = SubResource("CircleShape2D_fn3p6")

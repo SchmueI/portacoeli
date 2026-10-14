@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b41fy4f6aj17b"]
+
+[ext_resource type="Script" uid="uid://dppjvot3bqvcf" path="res://scripts/classes/ClickableObject.gd" id="1_v7a42"]
+[ext_resource type="Texture2D" uid="uid://bn68ydfv5e67q" path="res://assets/textures/levels/herbarium/interface/check.png" id="2_ltx8q"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sjvpp"]
+radius = 229.0
+height = 990.0
+
+[node name="ButtonCheck" type="Node2D" unique_id=402333780]
+script = ExtResource("1_v7a42")
+metadata/_custom_type_script = "uid://dppjvot3bqvcf"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1861442340]
+scale = Vector2(2, 2)
+texture = ExtResource("2_ltx8q")
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=1817304277]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TouchArea" unique_id=1776170549]
+position = Vector2(19, -11)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_sjvpp")

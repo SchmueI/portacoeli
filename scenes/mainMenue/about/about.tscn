@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://v7hahrj7g5xo"]
+
+[ext_resource type="Script" uid="uid://v3ulb04c0dg4" path="res://scenes/mainMenue/about/about.gd" id="1_wru6y"]
+[ext_resource type="Texture2D" uid="uid://d1yh7bgv1635k" path="res://assets/textures/interface/mainMenue/about.png" id="1_yy6pm"]
+[ext_resource type="PackedScene" uid="uid://bhks47v7gvqbb" path="res://scenes/interface/buttonBack.tscn" id="3_akwoh"]
+[ext_resource type="FontFile" uid="uid://d042jllc550q4" path="res://assets/fonts/ModernAntiqua-Regular.ttf" id="4_wru6y"]
+
+[node name="About" type="Node2D" unique_id=967105564]
+script = ExtResource("1_wru6y")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=189208139]
+position = Vector2(639.00006, 359.00003)
+scale = Vector2(1.55, 1.55)
+texture = ExtResource("1_yy6pm")
+
+[node name="ButtonBack" parent="." unique_id=1161179332 instance=ExtResource("3_akwoh")]
+position = Vector2(1203.0001, 87.00001)
+scale = Vector2(0.18, 0.18)
+
+[node name="Text" type="Node2D" parent="." unique_id=944095872]
+
+[node name="Title" type="Label" parent="Text" unique_id=574682703]
+offset_left = 30.0
+offset_top = 85.0
+offset_right = 1256.0
+offset_bottom = 154.0
+theme_override_colors/font_color = Color(0.23529412, 0.24705882, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("4_wru6y")
+theme_override_font_sizes/font_size = 60
+text = "PORTA COELI"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Publisher" type="Label" parent="Text" unique_id=803639965]
+offset_left = 22.0
+offset_top = 204.0
+offset_right = 1251.0
+offset_bottom = 277.0
+theme_override_colors/font_color = Color(0.23529412, 0.24705882, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("4_wru6y")
+theme_override_font_sizes/font_size = 30
+text = "Ein Spiel der Stiftung Schulpforta"
+horizontal_alignment = 1
+
+[node name="Credits" type="Label" parent="Text" unique_id=2019746011]
+offset_left = 22.0
+offset_top = 250.0
+offset_right = 1251.0
+offset_bottom = 289.0
+theme_override_colors/font_color = Color(0.23529412, 0.24705882, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("4_wru6y")
+theme_override_font_sizes/font_size = 30
+text = "Idee und Entwicklung: Laura Heinze / Samuel Elias Winkler"
+horizontal_alignment = 1
+
+[connection signal="clicked" from="ButtonBack" to="." method="_on_button_back_clicked"]

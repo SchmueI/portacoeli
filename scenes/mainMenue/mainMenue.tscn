@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://dlymhhccu5m03"]
+
+[ext_resource type="Script" uid="uid://82gul6cqhcnf" path="res://scenes/mainMenue/main_menue.gd" id="1_8eqkm"]
+[ext_resource type="Texture2D" uid="uid://uycnc8i2go0s" path="res://assets/textures/interface/mainMenue/background_c.png" id="2_8eqkm"]
+[ext_resource type="PackedScene" uid="uid://frve1k6iq43m" path="res://scenes/mainMenue/button.tscn" id="2_hbpsc"]
+[ext_resource type="FontFile" uid="uid://d042jllc550q4" path="res://assets/fonts/ModernAntiqua-Regular.ttf" id="4_bktnm"]
+
+[node name="MainMenue" type="Node2D" unique_id=1542111969]
+script = ExtResource("1_8eqkm")
+metadata/_custom_type_script = "uid://bfmiqjucse1sp"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=385132831]
+position = Vector2(634, 358)
+scale = Vector2(1.65, 1.65)
+texture = ExtResource("2_8eqkm")
+
+[node name="StartGame" parent="." unique_id=334214023 instance=ExtResource("2_hbpsc")]
+position = Vector2(478.00003, 314)
+scale = Vector2(6, 6)
+
+[node name="Settings" parent="." unique_id=1987716113 instance=ExtResource("2_hbpsc")]
+position = Vector2(477.00003, 419)
+scale = Vector2(6, 6)
+
+[node name="About" parent="." unique_id=1219326366 instance=ExtResource("2_hbpsc")]
+position = Vector2(478.00003, 523)
+scale = Vector2(6, 6)
+
+[node name="Quit" parent="." unique_id=88998544 instance=ExtResource("2_hbpsc")]
+position = Vector2(476, 626)
+scale = Vector2(6, 6)
+
+[node name="Text" type="Node2D" parent="." unique_id=286398296]
+position = Vector2(494, 260)
+
+[node name="Start" type="Label" parent="Text" unique_id=126591496]
+offset_right = 279.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0.23440996, 0.2473346, 0.13056058, 1)
+theme_override_fonts/font = ExtResource("4_bktnm")
+theme_override_font_sizes/font_size = 30
+text = "START"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings" type="Label" parent="Text" unique_id=1495206328]
+offset_top = 105.0
+offset_right = 279.0
+offset_bottom = 186.0
+theme_override_colors/font_color = Color(0.23440996, 0.2473346, 0.13056058, 1)
+theme_override_fonts/font = ExtResource("4_bktnm")
+theme_override_font_sizes/font_size = 30
+text = "SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="About" type="Label" parent="Text" unique_id=765553402]
+offset_top = 208.0
+offset_right = 279.0
+offset_bottom = 289.0
+theme_override_colors/font_color = Color(0.23440996, 0.2473346, 0.13056058, 1)
+theme_override_fonts/font = ExtResource("4_bktnm")
+theme_override_font_sizes/font_size = 30
+text = "ABOUT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quit" type="Label" parent="Text" unique_id=160903480]
+offset_top = 310.0
+offset_right = 279.0
+offset_bottom = 391.0
+theme_override_colors/font_color = Color(0.23440996, 0.2473346, 0.13056058, 1)
+theme_override_fonts/font = ExtResource("4_bktnm")
+theme_override_font_sizes/font_size = 30
+text = "QUIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="clicked" from="StartGame" to="." method="_on_start_game_clicked"]
+[connection signal="clicked" from="Settings" to="." method="_on_settings_clicked"]
+[connection signal="clicked" from="About" to="." method="_on_about_clicked"]

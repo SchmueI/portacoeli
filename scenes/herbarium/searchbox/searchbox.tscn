@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://clpvb3bu4n0th"]
+
+[ext_resource type="Script" uid="uid://cp5gmeyu3vrvw" path="res://scenes/herbarium/searchbox/searchbox.gd" id="1_gua8b"]
+[ext_resource type="Texture2D" uid="uid://ch5hhbjbkg80u" path="res://assets/textures/levels/herbarium/interface/searchbox.png" id="2_4dxct"]
+[ext_resource type="FontFile" uid="uid://d042jllc550q4" path="res://assets/fonts/ModernAntiqua-Regular.ttf" id="3_r4ngk"]
+
+[node name="Searchbox" type="Node2D" unique_id=1163418140]
+script = ExtResource("1_gua8b")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1154250737]
+scale = Vector2(2, 2)
+texture = ExtResource("2_4dxct")
+
+[node name="Nametag" type="Label" parent="." unique_id=957968651]
+offset_left = -493.0
+offset_top = -119.0
+offset_right = 274.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("3_r4ngk")
+theme_override_font_sizes/font_size = 70
+text = "Herbarium"
+horizontal_alignment = 1
+vertical_alignment = 1

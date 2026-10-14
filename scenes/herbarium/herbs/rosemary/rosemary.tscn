@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://1kgknqhjr5oj"]
+
+[ext_resource type="PackedScene" uid="uid://doghpawtvi2yh" path="res://scenes/herbarium/herbs/rosemary/leaves.tscn" id="1_28mwk"]
+[ext_resource type="Script" uid="uid://p8ai0ko3j3oj" path="res://scripts/classes/DragableObject.gd" id="1_b8x6r"]
+[ext_resource type="PackedScene" uid="uid://blg1ma2xn1k4" path="res://scenes/herbarium/herbs/rosemary/bloom.tscn" id="2_b8x6r"]
+[ext_resource type="PackedScene" uid="uid://dpt570mxma1cf" path="res://scenes/herbarium/herbs/rosemary/stem.tscn" id="3_ghmgs"]
+
+[node name="Rosemary" type="Node2D" unique_id=383793919]
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_b8x6r")
+intScale = 0.12
+metadata/_custom_type_script = "uid://p8ai0ko3j3oj"
+
+[node name="Stem" parent="." unique_id=1319938586 instance=ExtResource("3_ghmgs")]
+
+[node name="Leaves" parent="." unique_id=925439448 instance=ExtResource("1_28mwk")]
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Bloom" parent="." unique_id=1783249585 instance=ExtResource("2_b8x6r")]
+position = Vector2(-332.99997, -1964.9998)
+scale = Vector2(0.19999999, 0.19999999)

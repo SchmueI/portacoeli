@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cnabou8u28pyk"]
+
+[ext_resource type="Script" uid="uid://p8ai0ko3j3oj" path="res://scripts/classes/DragableObject.gd" id="1_cl6ph"]
+[ext_resource type="Texture2D" uid="uid://bdlcmhm4apg5d" path="res://assets/textures/levels/herbarium/herbs/thyme/bloom.png" id="2_4g6if"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnfe8"]
+size = Vector2(106.5, 229)
+
+[node name="Bloom" type="Node2D" unique_id=1827062937]
+script = ExtResource("1_cl6ph")
+metadata/_custom_type_script = "uid://p8ai0ko3j3oj"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1341732830]
+scale = Vector2(2, 2)
+texture = ExtResource("2_4g6if")
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=367987880]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TouchArea" unique_id=1938649716]
+polygon = PackedVector2Array(-67, -57, -117, -149, -174, -204, -211, -311, -141, -376, -82, -426, 9, -443, 67, -417, 115, -338, 118, -276, 114, -229, 58, -166, 83, -151, 148, -219, 180, -246, 287, -249, 331, -195, 352, -131, 292, -22, 259, 30, 202, 3, 215, 52, 224, 83, 141, 95, 109, 131, 128, 174, 99, 205, 96, 258, 67, 281, 4, 260, -3, 287, 16, 323, -43, 379, -60, 452, -95, 431, -76, 364, -113, 316, -88, 296, -52, 266, -109, 242, -136, 194, -71, 187, -117, 152, -185, 151, -163, 96, -178, 72, -236, 78, -262, 70, -211, 17, -271, 12, -301, -16, -331, -81, -338, -149, -266, -166, -202, -188, -163, -149, -131, -88, -123, -41, -95, 44)
+
+[node name="JointArea" type="Area2D" parent="." unique_id=1087226494]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JointArea" unique_id=392568948]
+position = Vector2(-71, 440)
+shape = SubResource("RectangleShape2D_fnfe8")

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bhks47v7gvqbb"]
+
+[ext_resource type="Script" uid="uid://dppjvot3bqvcf" path="res://scripts/classes/ClickableObject.gd" id="1_kj0hf"]
+[ext_resource type="Texture2D" uid="uid://db631xtpmpx2c" path="res://assets/textures/interface/back.png" id="2_t11js"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fnfe8"]
+radius = 316.02533
+
+[node name="ButtonBack" type="Node2D" unique_id=1161179332]
+script = ExtResource("1_kj0hf")
+metadata/_custom_type_script = "uid://dppjvot3bqvcf"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1616723009]
+scale = Vector2(2, 2)
+texture = ExtResource("2_t11js")
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=1606721011]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TouchArea" unique_id=259078910]
+shape = SubResource("CircleShape2D_fnfe8")

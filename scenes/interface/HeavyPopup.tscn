@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://s0wld4tux4is"]
+
+[ext_resource type="Script" uid="uid://dw0nes5iekceo" path="res://scenes/interface/heavy_popup.gd" id="1_a87u4"]
+[ext_resource type="Texture2D" uid="uid://ck2e2gvffvngj" path="res://assets/textures/interface/heavy_popup.png" id="2_btonx"]
+[ext_resource type="FontFile" uid="uid://d042jllc550q4" path="res://assets/fonts/ModernAntiqua-Regular.ttf" id="3_3ldll"]
+[ext_resource type="PackedScene" uid="uid://dlswii4cy80h3" path="res://scenes/interface/buttonNext.tscn" id="4_a87u4"]
+[ext_resource type="PackedScene" uid="uid://bhks47v7gvqbb" path="res://scenes/interface/buttonBack.tscn" id="5_c3lma"]
+[ext_resource type="PackedScene" uid="uid://mk3gxxlv3g3i" path="res://scenes/interface/buttonPrevious.tscn" id="6_11hjp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gwwne"]
+size = Vector2(976, 549)
+
+[node name="HeavyPopup" type="Node2D" unique_id=578929717]
+script = ExtResource("1_a87u4")
+metadata/_custom_type_script = "uid://dcvt5wx5sgfdn"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=417937090]
+position = Vector2(692, 362)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("2_btonx")
+
+[node name="Headline" type="Label" parent="." unique_id=2050182199]
+offset_left = 173.0
+offset_top = 110.0
+offset_right = 1145.0
+offset_bottom = 213.0
+theme_override_colors/font_color = Color(0.23529412, 0.24705882, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("3_3ldll")
+theme_override_font_sizes/font_size = 70
+text = "Wer das liest...."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Text" type="Label" parent="." unique_id=745788248]
+offset_left = 180.0
+offset_top = 208.0
+offset_right = 1142.0
+offset_bottom = 607.0
+theme_override_colors/font_color = Color(0.23529412, 0.24705882, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("3_3ldll")
+theme_override_font_sizes/font_size = 30
+text = "Dies ist der sehr lange Text über wichtige Dinge, die in diesem sehr langen Text besprochen werden müssen. Wer diesen Text zu sehen bekommt, weiß, dass es um etwas wichtiges geht. Naja oder der geht zumindest davon aus. Immerhin hat sich ein Entwickler die Mühe gemacht, das alles hier zu schreiben!
+Meine Güte
+ZEILENUMBRÜCHE
+Hier passt wirklich viel rein :)"
+autowrap_mode = 3
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=652072948]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TouchArea" unique_id=1534090014]
+position = Vector2(660, 358.5)
+shape = SubResource("RectangleShape2D_gwwne")
+
+[node name="ButtonNext" parent="." unique_id=2034107673 instance=ExtResource("4_a87u4")]
+position = Vector2(1162, 651)
+scale = Vector2(0.15, 0.15)
+
+[node name="ButtonBack" parent="." unique_id=1161179332 instance=ExtResource("5_c3lma")]
+position = Vector2(1165, 67)
+scale = Vector2(0.15, 0.15)
+
+[node name="ButtonPrevious" parent="." unique_id=1631403355 instance=ExtResource("6_11hjp")]
+position = Vector2(161, 649)
+scale = Vector2(0.15, 0.15)
+
+[connection signal="clicked" from="." to="." method="_on_clicked"]
+[connection signal="clicked" from="ButtonNext" to="." method="_on_button_next_clicked"]
+[connection signal="clicked" from="ButtonBack" to="." method="_on_button_back_clicked"]
+[connection signal="clicked" from="ButtonPrevious" to="." method="_on_button_previous_clicked"]

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bl4rajopylo35"]
+
+[ext_resource type="Script" uid="uid://bsxvt80fpjs74" path="res://scenes/base.gd" id="1_c07sk"]
+
+[node name="Base" type="Node2D" unique_id=1011711593]
+script = ExtResource("1_c07sk")
+metadata/_custom_type_script = "uid://bfmiqjucse1sp"

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c8034g2vyqoyq"]
+
+[ext_resource type="Script" uid="uid://dppjvot3bqvcf" path="res://scripts/classes/ClickableObject.gd" id="1_wh6xn"]
+[ext_resource type="Texture2D" uid="uid://c6lxw3pnmmer" path="res://assets/textures/interface/levelSelector/herbarium.png" id="2_l8mf0"]
+
+[node name="HerbariumButton" type="Node2D" unique_id=1362527693]
+script = ExtResource("1_wh6xn")
+metadata/_custom_type_script = "uid://dppjvot3bqvcf"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=373986414]
+texture = ExtResource("2_l8mf0")
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=1473545738]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TouchArea" unique_id=1901353696]
+polygon = PackedVector2Array(13, 156, 109, -9, 114, -57, 97, -105, 55, -144, 12, -160, -46, -151, -91, -118, -113, -76, -113, -30, -105, -3, -18, 155, -5, 159)

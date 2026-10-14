@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b4n7vv8mjssy8"]
+
+[ext_resource type="Script" uid="uid://dppjvot3bqvcf" path="res://scripts/classes/ClickableObject.gd" id="1_g56wi"]
+[ext_resource type="Texture2D" uid="uid://62qmgru0qe2r" path="res://assets/textures/levels/herbarium/interface/book.png" id="2_ln4th"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n4jnq"]
+radius = 258.48
+height = 894.76
+
+[node name="ButtonBook" type="Node2D" unique_id=1894986160]
+script = ExtResource("1_g56wi")
+metadata/_custom_type_script = "uid://dppjvot3bqvcf"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1833367060]
+scale = Vector2(2, 2)
+texture = ExtResource("2_ln4th")
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=1492718779]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TouchArea" unique_id=556432100]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_n4jnq")

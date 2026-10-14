@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://doghpawtvi2yh"]
+
+[ext_resource type="Script" uid="uid://p8ai0ko3j3oj" path="res://scripts/classes/DragableObject.gd" id="1_q8hde"]
+[ext_resource type="Texture2D" uid="uid://eq0ao1p70vdf" path="res://assets/textures/levels/herbarium/herbs/rosemary/leaves.png" id="2_xu3xn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnfe8"]
+size = Vector2(594.25, 3438.5)
+
+[node name="Leaves" type="Node2D" unique_id=925439448]
+script = ExtResource("1_q8hde")
+intScale = 0.052
+dragScale = 0.08
+metadata/_custom_type_script = "uid://p8ai0ko3j3oj"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=589163198]
+texture = ExtResource("2_xu3xn")
+
+[node name="JointArea" type="Area2D" parent="." unique_id=1255146575]
+position = Vector2(-56, 28)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JointArea" unique_id=1435546775]
+position = Vector2(97, -384)
+shape = SubResource("RectangleShape2D_fnfe8")
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=1852508458]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TouchArea" unique_id=1713124917]
+polygon = PackedVector2Array(-328, -2207, -151, -2127, -8, -2115, 173, -2164, 311, -2106, 309, -1755, 313, -1619, 467, -1587, 483, -1486, 313, -1399, 334, -1252, 520, -1065, 720, -951, 614, -824, 357, -817, 382, -698, 688, -560, 628, -427, 456, -383, 431, -298, 532, -41, 513, 76, 412, 86, 589, 230, 660, 387, 518, 437, 355, 416, 327, 561, 460, 731, 536, 890, 392, 1016, 394, 1232, 348, 1478, -38, 1492, -346, 1324, -592, 1156, -601, 924, -461, 871, -406, 701, -300, 563, -332, 338, -201, 118, -357, -94, -282, -298, -82, -429, -399, -496, -263, -918, -249, -1162, -491, -1254, -268, -1445, -498, -1490)
