@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://i4qdxuufxnh5"]
+
+[ext_resource type="Script" uid="uid://dppjvot3bqvcf" path="res://scripts/classes/ClickableObject.gd" id="1_026jw"]
+[ext_resource type="Texture2D" uid="uid://br11lnlxryelv" path="res://assets/textures/interface/levelSelector/sheep.png" id="2_3iwoa"]
+
+[node name="SheepButton" type="Node2D" unique_id=676039394]
+script = ExtResource("1_026jw")
+metadata/_custom_type_script = "uid://dppjvot3bqvcf"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=347572450]
+texture = ExtResource("2_3iwoa")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1510712007]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=2056847448]
+polygon = PackedVector2Array(199, 2028, 1420, -101, 1493, -691, 1335, -1298, 976, -1709, 362, -2067, 12, -2079, -595, -2006, -1209, -1517, -1527, -683, -1437, -251, -220, 2007, -90, 2064)

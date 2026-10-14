@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ffbuda4h13ky"]
+
+[ext_resource type="Script" uid="uid://dppjvot3bqvcf" path="res://scripts/classes/ClickableObject.gd" id="1_bscs0"]
+[ext_resource type="Texture2D" uid="uid://bmfoddicqe5jt" path="res://assets/textures/interface/levelSelector/forrest.png" id="2_vmyg4"]
+
+[node name="ForrestButton" type="Node2D" unique_id=1831271320]
+script = ExtResource("1_bscs0")
+metadata/_custom_type_script = "uid://dppjvot3bqvcf"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=172865745]
+texture = ExtResource("2_vmyg4")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1910059934]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1910903674]
+polygon = PackedVector2Array(199, 2028, 1420, -101, 1493, -691, 1335, -1298, 976, -1709, 362, -2067, 12, -2079, -595, -2006, -1209, -1517, -1527, -683, -1437, -251, -220, 2007, -90, 2064)
