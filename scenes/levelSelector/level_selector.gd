@@ -48,17 +48,20 @@ func open_hint_popup():
 func open_implementation_missing_popup():
 	$PopupController.init_popup(
 	TEXT[lang]["missing"], 
-	TEXT[lang]["missing_text"])
+	TEXT[lang]["missing_text"],
+	{"timed":true,
+	"heavy":false,
+	"duration": 6.5,
+	"scale":Vector2(0.35, 0.35)})
 
 func launch_game(scene:String):
 	var sc : PackedScene = load(scene)
 	var instance = sc.instantiate()
+	get_parent().add_child(instance)
+	queue_free()
 
 func _on_button_back_clicked() -> void:
-	var HerbariumScene : PackedScene = load("res://scenes/mainMenue/mainMenue.tscn")
-	var herbarium = HerbariumScene.instantiate()
-	get_parent().add_child(herbarium)
-	queue_free()
+	launch_game("res://scenes/mainMenue/mainMenue.tscn")
 
 func _on_herbarium_button_clicked() -> void:
 	var HerbariumScene : PackedScene = load("res://scenes/herbarium/herbarium.tscn")
