@@ -71,6 +71,10 @@ func open_preview(gameID:String):
 	var preview = load(Previews.new().get_preview(gameID)).instantiate()
 	preview.position = Vector2(650, 440)
 	preview.scale = Vector2(1.8, 1.8)
+	preview.sprite_frames.set_animation_loop_mode(
+		"default",
+		SpriteFrames.LOOP_PINGPONG
+	)
 	preview.play("default")
 	
 	popup.add_child(preview)
