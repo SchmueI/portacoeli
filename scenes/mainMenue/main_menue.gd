@@ -9,11 +9,14 @@ func _ready() -> void:
 	$Text/About.text		= TEXT [lang] ["about"]
 	$Text/Quit.text			= TEXT [lang] ["quit"]
 	
+func _enter_tree() -> void:
+	AudioManager.play_menu_music()
 	
 	
 func _on_start_game_clicked() -> void:
 	var Level : PackedScene = load("res://scenes/levelSelector/levelSelector.tscn")
 	var level = Level.instantiate()
+	AudioManager.stop_music()
 	get_parent().add_child(level)
 	queue_free()
 
