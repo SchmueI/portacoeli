@@ -1,19 +1,24 @@
 extends Node
 
-func play_menu_music() -> void:
-	$AmbientMusicPlayer.stop()
+@onready var music = $MusicPlayer
+@onready var ambientMusic = $AmbientMusicPlayer
 
-	if not $MusicPlayer.playing:
-		$MusicPlayer.play()
+
+func play_menu_music() -> void:
+	ambientMusic.stop()
+
+	if not music.playing:
+		music.play()
+		
 
 
 func play_exploration_music() -> void:
-	$MusicPlayer.stop()
+	music.stop()
 
-	if not $AmbientMusicPlayer.playing:
-		$AmbientMusicPlayer.play()
+	if not ambientMusic.playing:
+		ambientMusic.play()
 
 
 func stop_music() -> void:
-	$MusicPlayer.stop()
-	$AmbientMusicPlayer.stop()
+	music.stop()
+	ambientMusic.stop()
