@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bwq3w71kmgxui" path="res://scenes/audio/audio_manager.gd" id="1_f113j"]
 [ext_resource type="AudioStream" uid="uid://dumvp3ghmywql" path="res://assets/media/music/The_Bards_Tale.mp3" id="2_iognr"]
+[ext_resource type="AudioStream" uid="uid://5kbhuidci3jr" path="res://assets/media/music/harvestseason.mp3" id="2_oarm6"]
 
 [node name="AudioManager" type="Node" unique_id=1063610622]
 script = ExtResource("1_f113j")
@@ -9,8 +10,10 @@ script = ExtResource("1_f113j")
 [node name="AmbientMusicTimer" type="Timer" parent="." unique_id=1921225867]
 
 [node name="AmbientMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1567998888]
+stream = ExtResource("2_oarm6")
+volume_db = -10.0
 bus = &"Music"
 
-[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=981341357]
+[node name="MenuMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=981341357]
 stream = ExtResource("2_iognr")
 bus = &"Music"

@@ -1,24 +1,26 @@
 extends Node
 
-@onready var music = $MusicPlayer
+@onready var menuMusic = $MenuMusicPlayer
 @onready var ambientMusic = $AmbientMusicPlayer
 
+@onready var musicPlayer:Dictionary = {
+	"menu":menuMusic,
+	"ambient":ambientMusic
+}
 
-func play_menu_music() -> void:
-	ambientMusic.stop()
+func get_music_by_id(id:String) -> AudioStreamPlayer:
+	var output = musicPlayer.get(id, null)
+	return output
 
-	if not music.playing:
-		music.play()
+func play_music(id:String) -> void:
+	stop_music()
+	var music = get_music_by_id(id)
+	
+	if music == null:
+		return
 		
-
-
-func play_exploration_music() -> void:
-	music.stop()
-
-	if not ambientMusic.playing:
-		ambientMusic.play()
-
+	music.play()
 
 func stop_music() -> void:
-	music.stop()
-	ambientMusic.stop()
+	for entity in musicPlayer:
+		musicPlayer[entity].stop()
