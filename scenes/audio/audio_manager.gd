@@ -13,14 +13,22 @@ func get_music_by_id(id:String) -> AudioStreamPlayer:
 	return output
 
 func play_music(id:String) -> void:
-	stop_music()
 	var music = get_music_by_id(id)
 	
 	if music == null:
+		stop_music()
 		return
-		
-	music.play()
+	
+	if not music.is_playing():
+		stop_music()
+		music.play()
+	
 
-func stop_music() -> void:
-	for entity in musicPlayer:
-		musicPlayer[entity].stop()
+func stop_music(id:String = "") -> void:
+	if id == "":
+		for entity in musicPlayer:
+			musicPlayer[entity].stop()
+	else:
+		var music = get_music_by_id(id)
+		if music == null:return
+		else: music.stop()
