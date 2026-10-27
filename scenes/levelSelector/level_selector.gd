@@ -4,6 +4,7 @@ var savemanager = SaveManager.new()
 var RNG = RandomNumberGenerator.new()
 var TEXT = preload("res://assets/text/interface/mainMenue/mainMenue.gd").new().level_selector
 var lang = "ger"
+var musicID = "ambient"
 
 func _ready() -> void:
 	lang = savemanager.load_specific("settings", {"lang":"ger"}).get("lang", "ger")
@@ -16,6 +17,12 @@ func _ready() -> void:
 	$Map.position = mapposition
 	RNG.randomize()
 	check_init()
+	
+func _enter_tree() -> void:
+	AudioManager.play_music(musicID)
+	
+func _exit_tree() -> void:
+	AudioManager.stop_music(musicID)
 	
 func check_init():
 	if not savemanager.load_specific("mapmoved", false):

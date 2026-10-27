@@ -1,6 +1,7 @@
 extends GameBase
 
 var TEXT = preload("res://assets/text/interface/mainMenue/mainMenue.gd").new().menue
+var musicID = "menu"
 
 func _ready() -> void:
 	lang = get_parent().lang
@@ -9,8 +10,9 @@ func _ready() -> void:
 	$Text/About.text		= TEXT [lang] ["about"]
 	$Text/Quit.text			= TEXT [lang] ["quit"]
 	
+	
 func _enter_tree() -> void:
-	AudioManager.play_menu_music()
+	AudioManager.play_music(musicID)
 	
 	
 func _on_start_game_clicked() -> void:
