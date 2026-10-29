@@ -1,10 +1,7 @@
-[gd_scene format=3 uid="uid://blg1ma2xn1k4"]
+[gd_scene format=3 uid="uid://dnpfq51pse7e2"]
 
 [ext_resource type="Script" uid="uid://p8ai0ko3j3oj" path="res://scripts/classes/DragableObject.gd" id="1_46qqg"]
-[ext_resource type="Texture2D" uid="uid://246ojim2wasx" path="res://assets/textures/levels/herbarium/herbs/rosemary/bloom.png" id="2_lb6pr"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n4jnq"]
-size = Vector2(1086.625, 1669.625)
+[ext_resource type="Texture2D" uid="uid://2itrtxtql65j" path="res://assets/textures/levels/herbarium/herbs/rosemary/puzzle/bloom.png" id="2_lb6pr"]
 
 [node name="Bloom" type="Node2D" unique_id=1783249585]
 script = ExtResource("1_46qqg")
@@ -20,10 +17,3 @@ texture = ExtResource("2_lb6pr")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TouchArea" unique_id=697651408]
 polygon = PackedVector2Array(-2024, -1185, -1984, -1592, -1906, -1810, -2080, -1659, -2187, -1666, -2206, -1940, -2431, -1962, -2195, -2155, -1958, -2347, -1810, -2573, -1432, -2769, -814, -2758, -219, -2506, -500, -3709, -470, -3994, -345, -4123, -108, -4097, 222, -3794, 433, -3142, 558, -3779, 814, -4167, 947, -4201, 1121, -4001, 1139, -4005, 1143, -4008, 1235, -3649, 1480, -2843, 1587, -1947, 1472, -1359, 1687, -1274, 2313, -315, 2688, 324, 2639, 877, 2505, 1024, 2696, 1402, 2537, 1500, 2346, 1500, 2187, 1191, 2028, 1215, 1845, 1117, 1739, 1476, 1573, 1667, 1381, 1606, 905, 1117, 913, 1317, 962, 1545, 779, 1891, 640, 2200, 546, 2911, 351, 3394, -104, 3908, -456, 4152, -955, 4201, -1226, 3984, -1339, 3773, -1605, 3973, -1935, 4022, -2352, 3675, -2347, 3329, -2542, 3171, -2580, 2808, -2461, 2603, -2661, 2456, -2537, 2158, -2629, 1801, -2277, 1774, -2396, 1497, -2266, 1237, -1892, 772, -1388, 734, -1074, 1032, -754, 912, -554, 593, -1117, 544, -1767, 295, -2049, -144, -2445, -610, -2569, -967, -2315, -1162)
-
-[node name="JointArea" type="Area2D" parent="." unique_id=506187165]
-position = Vector2(-1, 0)
-
-[node name="CollisionPolygon2D" type="CollisionShape2D" parent="JointArea" unique_id=215897752]
-position = Vector2(2561.6875, 1983.1875)
-shape = SubResource("RectangleShape2D_n4jnq")

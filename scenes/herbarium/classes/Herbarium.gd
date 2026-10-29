@@ -10,7 +10,7 @@ var Rosemary = {
 	"parts" :	{
 		"bloom" : load("res://scenes/herbarium/herbs/rosemary/bloom.tscn"),
 		"stem": load("res://scenes/herbarium/herbs/rosemary/stem.tscn"),
-		"leaves" : load("res://scenes/herbarium/herbs/rosemary/leaves.tscn")
+		"leaves" : load("res://scenes/herbarium/herbs/rosemary/leave.tscn")
 	},
 	"set": load("res://scenes/herbarium/herbs/rosemary/rosemary.tscn"),
 	"info"	:	TEXT.rosemary

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://x5b21igh3u0e"]
+
+[ext_resource type="Script" uid="uid://p8ai0ko3j3oj" path="res://scripts/classes/DragableObject.gd" id="1_krwj3"]
+[ext_resource type="Texture2D" uid="uid://sjq8hekcc2a7" path="res://assets/textures/levels/herbarium/herbs/rosemary/puzzle/leave.png" id="2_178ve"]
+
+[node name="Leave" type="Node2D" unique_id=673809890]
+script = ExtResource("1_krwj3")
+intScale = 0.05
+dragScale = 0.077
+metadata/_custom_type_script = "uid://p8ai0ko3j3oj"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=219321953]
+texture = ExtResource("2_178ve")
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=1587616209]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TouchArea" unique_id=1266271693]
+polygon = PackedVector2Array(-1404, -233, -1026, -244, -708, -284, -187, -378, 138, -418, 543, -408, 1417, -214, 1415, -266, 1069, -466, 551, -636, 149, -675, -234, -648, -856, -519, -1426, -298, -1408, -246)
