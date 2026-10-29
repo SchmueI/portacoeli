@@ -11,6 +11,12 @@ extends Node2D
 
 @onready var sprite		:	Sprite2D	=	$Sprite2D
 
+static var COMPLETE := {"stem":true, "bloom":true, "leaves":true}
+var initState : Dictionary
+
+func _ready() -> void:
+	set_state()
+
 func get_texture(state:Dictionary) -> Texture2D:
 	var has_stem:bool = state.get("stem", false)
 	var has_bloom:bool = state.get("bloom", false)
@@ -42,10 +48,14 @@ func get_texture(state:Dictionary) -> Texture2D:
 			return null
 	
 	
-func set_state(state:Dictionary) -> void:
+func set_state(state:Dictionary=initState) -> void:
 	var texture : Texture2D = get_texture(state)
-	sprite.texture = texture
+	
 	if not texture == null: 
 		sprite.visible = true
+		sprite.texture = texture
 	else:
 		sprite.visible = false 
+		
+func init_state(state:Dictionary) -> void:
+	initState = state
