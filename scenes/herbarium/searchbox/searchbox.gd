@@ -22,11 +22,9 @@ func _ready() -> void:
 		var part_instance = part.instantiate()
 		part_instance.position = Vector2(530, -230+offset)
 		part_instance.scale = Vector2(part_instance.intScale, part_instance.intScale)
-		part_instance.set_script(null)
+		part_instance.init_state(HerbView.COMPLETE)
 		herbariumcontroller.check_modulation(goal["name"], part_instance)
 		add_child(part_instance)
-		for child in part_instance.get_children():
-			child.touch_enabled = false
 	
 	else:
 		var i : int = 0

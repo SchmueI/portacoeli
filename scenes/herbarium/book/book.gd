@@ -31,9 +31,11 @@ func draw(herb) -> void:
 	
 	if herb.has("set"):
 		var part = herb["set"]
-		var part_instance = part.instantiate()
+		var part_instance : HerbView = part.instantiate()
 		part_instance.position = Vector2(800, 300)
-		part_instance.set_script(null)
+		part_instance.init_state(HerbView.COMPLETE)
+		var part_scale = part_instance.intScale*0.8
+		part_instance.scale = Vector2(part_scale, part_scale)
 		herbariumcontroller.check_modulation(herb["name"], part_instance)
 		HerbContainer.add_child(part_instance)
 	
