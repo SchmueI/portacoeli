@@ -9,6 +9,8 @@ extends Node2D
 @export var bloom_leaves:	Texture2D
 @export var complete	:	Texture2D
 
+@export var intScale	:	float		=	0.1
+
 @onready var sprite		:	Sprite2D	=	$Sprite2D
 
 static var COMPLETE := {"stem":true, "bloom":true, "leaves":true}
