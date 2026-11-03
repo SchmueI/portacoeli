@@ -61,12 +61,7 @@ static func get_elements_in_target_area(
 	var elements_in_target: Array[Node2D] = []
 
 	for element in elements:
-		var touch_area := element.get_node_or_null("TouchArea") as Area2D
-
-		if touch_area == null:
-			continue
-
-		if touch_area.overlaps_area(target_area):
+		if is_element_in_target_area(element, target_area):
 			elements_in_target.append(element as Node2D)
 
 	return elements_in_target
@@ -75,6 +70,12 @@ static func is_element_in_target_area(
 	element:Node,
 	target_area: Area2D
 ) -> bool:
-	var checker: Array[Node] = [element]
-	var target:Array[Node2D] = get_elements_in_target_area(target_area, checker)
-	return checker == target
+	var touch_area := element.get_node_or_null("TouchArea") as Area2D
+
+	if touch_area == null:
+		return false
+
+	if touch_area.overlaps_area(target_area):
+		return true
+	else: 
+		return false
