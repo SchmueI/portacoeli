@@ -79,3 +79,16 @@ static func is_element_in_target_area(
 		return true
 	else: 
 		return false
+
+static func is_element_part_of_goal(
+	element:Node,
+	goal:String
+) -> bool:
+	return element.is_in_group(goal)
+	
+static func check_valid_insertion(
+	element:Node,
+	target_area:Area2D,
+	goal:String
+) -> bool:
+	return is_element_in_target_area(element, target_area) and is_element_part_of_goal(element, goal)
