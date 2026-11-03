@@ -73,9 +73,11 @@ metadata/_custom_type_script = "uid://d37nqnwk7llc2"
 script = ExtResource("12_w4uah")
 metadata/_custom_type_script = "uid://cfnl72cnjjeqc"
 
-[node name="HerbariumController" type="Node" parent="." unique_id=1503111356 node_paths=PackedStringArray("herbarium")]
+[node name="HerbariumController" type="Node" parent="." unique_id=1503111356 node_paths=PackedStringArray("herbarium", "parts", "target")]
 script = ExtResource("13_5qdp2")
 herbarium = NodePath("..")
+parts = NodePath("../Herbs")
+target = NodePath("../Target")
 metadata/_custom_type_script = "uid://cwm2f1k20ids4"
 
 [connection signal="clicked" from="ButtonBook" to="." method="_on_button_book_clicked"]

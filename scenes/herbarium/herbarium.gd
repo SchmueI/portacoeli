@@ -214,3 +214,5 @@ func load_elements(elements : Array):
 			Part.boundary_mode = DragableObject.BoundaryMode.KEEP_INSIDE
 			
 			herbs.add_child(Part)
+	
+	herbariumcontroller.connect_part_signals()

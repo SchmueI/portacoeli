@@ -2,12 +2,15 @@ class_name HerbariumController
 extends Node
 
 var goal : Dictionary = {}
+var assembled : Array[String]
 
 var savemanager = SaveManager.new()
 @export var herbarium:herbariumgame
+@export var parts:Node2D
+@export var target:Node2D
 	
 func load_data() -> Dictionary:
-	return savemanager.load_specific("games", herbarium.standardSettings)	
+	return savemanager.load_specific("games", herbarium.standardSettings)
 
 func save_data(data:Dictionary) -> void:
 	savemanager.modify_data({"games":data})
@@ -60,7 +63,47 @@ func next_level() -> void:
 	var herblist = create_herblist(2)
 	goal = select_goal(herblist)
 	herbarium.HERBS = herblist
+	assembled = []
 
+func connect_part_signals() -> void:
+	for child in parts.get_children():
+		child.moved.connect(
+			func():
+				part_moved(child)
+		)
+	
+func part_moved(part):
+	var targetArea = target.get_child(1)
+	var goalname : String = goal["name"]
+	var insertion = CombinationChecker.check_valid_insertion(part, targetArea, goalname)
+	if insertion == true: 
+		handle_correct_insertion(part)
+		check_assembly()
+	if insertion == false: handle_incorrect_insertion(part)
+
+func get_part_name(part):
+	for p in goal["parts"]:
+		if part.is_in_group(p): return p
+	return null
+	
+func handle_correct_insertion(part):
+	var part_name = get_part_name(part)
+	if not part_name in assembled:
+		assembled.append(part_name)
+	print (assembled)
+	
+func handle_incorrect_insertion(part):
+	pass
+	
+func check_assembly():
+	var goalparts := []
+	for p in goal["parts"]:
+		goalparts.append(p)
+	goalparts.sort()
+	assembled.sort()
+	if goalparts == assembled:
+		herbarium._handle_correct_solution(goal["name"])
+	
 func maximum_information(herb:String) -> int:
 	var output : int = 0
 	var assemblies = int(get_assemblies(herb))
