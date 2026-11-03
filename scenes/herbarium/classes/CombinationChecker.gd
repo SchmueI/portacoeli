@@ -72,8 +72,8 @@ static func get_elements_in_target_area(
 	return elements_in_target
 
 static func is_element_in_target_area(
-	target_area: Area2D, 
-	element:Node
+	element:Node,
+	target_area: Area2D
 ) -> bool:
 	var checker: Array[Node] = [element]
 	var target:Array[Node2D] = get_elements_in_target_area(target_area, checker)
