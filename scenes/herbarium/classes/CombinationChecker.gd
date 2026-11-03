@@ -90,5 +90,9 @@ static func check_valid_insertion(
 	element:Node,
 	target_area:Area2D,
 	goal:String
-) -> bool:
-	return is_element_in_target_area(element, target_area) and is_element_part_of_goal(element, goal)
+) -> Variant:
+	var isintarget = is_element_in_target_area(element, target_area)
+	var ispartofgoal = is_element_part_of_goal(element, goal)
+	if not isintarget: return null
+	elif ispartofgoal: return true
+	else: return false
