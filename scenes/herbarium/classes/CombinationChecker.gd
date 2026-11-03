@@ -70,3 +70,11 @@ static func get_elements_in_target_area(
 			elements_in_target.append(element as Node2D)
 
 	return elements_in_target
+
+static func is_element_in_target_area(
+	target_area: Area2D, 
+	element:Node
+) -> bool:
+	var checker: Array[Node] = [element]
+	var target:Array[Node2D] = get_elements_in_target_area(target_area, checker)
+	return checker == target
