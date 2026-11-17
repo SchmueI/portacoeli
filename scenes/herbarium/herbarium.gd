@@ -77,6 +77,19 @@ func init_level() -> void:
 	z_box 		= box			.z_index
 	pos_box 	= box			.position
 	
+	# reset herb_viewer
+	for child in $Target/HerbViewer.get_children():
+		child.queue_free()
+
+	# load new herb_viewer
+	var goal = herbariumcontroller.get_goal()
+	if goal.has("set"):
+		var part = goal["set"]
+		var part_instance = part.instantiate()
+		part_instance.scale = Vector2(part_instance.intScale*1.66, part_instance.intScale*1.66)
+		part_instance.init_state()
+		$Target/HerbViewer.add_child(part_instance)
+	
 	#instantiate spawn area for elements
 	triangulation = Geometry2D.triangulate_polygon(
 		spawn_polygon.polygon
@@ -111,11 +124,12 @@ func _handle_correct_solution(groupname) -> void:
 		for node in Nodes:
 			node.queue_free()
 			
-	Nodes = get_tree().get_nodes_in_group(groupname)
+	Nodes = $Target/HerbViewer.get_children()
 	for node in Nodes:
 		var pos = inipos
 		var time = RNG.randf_range(0.7,0.9)
-		$MovementController.move_element(node, pos, time)
+		var scl = Vector2(node.intScale, node.intScale)
+		$MovementController.fade_element(node, pos, time, scl)
 	
 	var timer = Timer.new()
 	add_child(timer)

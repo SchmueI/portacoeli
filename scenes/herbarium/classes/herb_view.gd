@@ -59,5 +59,5 @@ func set_state(state:Dictionary=initState) -> void:
 	else:
 		sprite.visible = false 
 		
-func init_state(state:Dictionary) -> void:
+func init_state(state:Dictionary={}) -> void:
 	initState = state

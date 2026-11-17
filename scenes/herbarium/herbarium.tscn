@@ -31,6 +31,8 @@ polygon = PackedVector2Array(74, 151, 69, 517, 243, 488, 380, 550, 508, 509, 843
 position = Vector2(628.00006, 307.00003)
 scale = Vector2(0.35, 0.35)
 
+[node name="HerbViewer" type="Node2D" parent="Target" unique_id=1914654004]
+
 [node name="Herbs" type="Node2D" parent="." unique_id=639362357]
 
 [node name="ButtonBook" parent="." unique_id=1894986160 groups=["UI"] instance=ExtResource("12_0po5q")]
@@ -73,11 +75,12 @@ metadata/_custom_type_script = "uid://d37nqnwk7llc2"
 script = ExtResource("12_w4uah")
 metadata/_custom_type_script = "uid://cfnl72cnjjeqc"
 
-[node name="HerbariumController" type="Node" parent="." unique_id=1503111356 node_paths=PackedStringArray("herbarium", "parts", "target")]
+[node name="HerbariumController" type="Node" parent="." unique_id=1503111356 node_paths=PackedStringArray("herbarium", "parts", "target", "herbviewer")]
 script = ExtResource("13_5qdp2")
 herbarium = NodePath("..")
 parts = NodePath("../Herbs")
 target = NodePath("../Target")
+herbviewer = NodePath("../Target/HerbViewer")
 metadata/_custom_type_script = "uid://cwm2f1k20ids4"
 
 [connection signal="clicked" from="ButtonBook" to="." method="_on_button_book_clicked"]

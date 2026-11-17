@@ -8,6 +8,7 @@ var savemanager = SaveManager.new()
 @export var herbarium:herbariumgame
 @export var parts:Node2D
 @export var target:Node2D
+@export var herbviewer:Node2D
 	
 func load_data() -> Dictionary:
 	return savemanager.load_specific("games", herbarium.standardSettings)
@@ -90,11 +91,20 @@ func handle_correct_insertion(part):
 	var part_name = get_part_name(part)
 	if not part_name in assembled:
 		assembled.append(part_name)
-	print (assembled)
-	
+		var dic = get_dictionary()
+		for child in herbviewer.get_children():
+			child.set_state(dic)
+	part.queue_free()
+			
 func handle_incorrect_insertion(part):
 	pass
 	
+func get_dictionary() -> Dictionary:
+	var dic := {}
+	for i in assembled:
+		dic[i] = true
+	return dic
+		
 func check_assembly():
 	var goalparts := []
 	for p in goal["parts"]:
