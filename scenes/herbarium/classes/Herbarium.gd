@@ -16,24 +16,4 @@ var Rosemary = {
 	"info"	:	TEXT.rosemary
 }
 
-var Sage = {
-	"name"	:	"sage",
-	"parts" :	{
-		"bloom" : load("res://scenes/herbarium/herbs/sage/bloom.tscn"),
-		"corpus": load("res://scenes/herbarium/herbs/sage/corpus.tscn"),
-		"roots" : load("res://scenes/herbarium/herbs/sage/roots.tscn")
-	},
-	"info"	:	TEXT.sage
-}
-
-var Thyme = {
-	"name"	:	"thyme",
-	"parts" :	{
-		"bloom" : load("res://scenes/herbarium/herbs/thyme/bloom.tscn"),
-		"corpus": load("res://scenes/herbarium/herbs/thyme/corpus.tscn"),
-		"roots" : load("res://scenes/herbarium/herbs/thyme/roots.tscn")
-	},
-	"info"	:	TEXT.thyme
-}
-
-var HerbList = [Rosemary, Sage, Thyme]
+var HerbList = [Rosemary]
