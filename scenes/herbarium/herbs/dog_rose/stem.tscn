@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://rbq1y4kl016q"]
 
 [ext_resource type="Texture2D" uid="uid://bl4uh2wu8c6kt" path="res://assets/textures/levels/herbarium/herbs/dog_rose/puzzle/stem.png" id="1_3yome"]
+[ext_resource type="Script" uid="uid://p8ai0ko3j3oj" path="res://scripts/classes/DragableObject.gd" id="1_m2gsx"]
 
-[node name="Stem" type="Node2D" unique_id=646264261]
+[node name="Stem" type="Node2D" unique_id=125229681]
+script = ExtResource("1_m2gsx")
+metadata/_custom_type_script = "uid://p8ai0ko3j3oj"
 
 [node name="StemSprite" type="Sprite2D" parent="." unique_id=2049227623]
 texture = ExtResource("1_3yome")

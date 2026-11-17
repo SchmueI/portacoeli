@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://dg7y3hepiqron"]
 
 [ext_resource type="Texture2D" uid="uid://du4521s81756f" path="res://assets/textures/levels/herbarium/herbs/dog_rose/puzzle/leave.png" id="1_nlaua"]
+[ext_resource type="Script" uid="uid://p8ai0ko3j3oj" path="res://scripts/classes/DragableObject.gd" id="1_t52e4"]
 
-[node name="Leave" type="Node2D" unique_id=646264261]
+[node name="Leave" type="Node2D" unique_id=269282907]
+script = ExtResource("1_t52e4")
+metadata/_custom_type_script = "uid://p8ai0ko3j3oj"
 
 [node name="LeaveSprite" type="Sprite2D" parent="." unique_id=2049227623]
 texture = ExtResource("1_nlaua")
