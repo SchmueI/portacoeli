@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dg7y3hepiqron"]
+
+[ext_resource type="Texture2D" uid="uid://du4521s81756f" path="res://assets/textures/levels/herbarium/herbs/dog_rose/puzzle/leave.png" id="1_nlaua"]
+
+[node name="Leave" type="Node2D" unique_id=646264261]
+
+[node name="LeaveSprite" type="Sprite2D" parent="." unique_id=2049227623]
+texture = ExtResource("1_nlaua")
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=1002605447]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TouchArea" unique_id=1240950069]
+polygon = PackedVector2Array(-922, 737, -682, 1089, -543, 1129, -336, 1157, 5, 1190, 215, 1177, 374, 1192, 645, 1197, 819, 1048, 1092, 768, 1448, 214, 1347, -359, 754, -1047, -214, -1234, -995, -1062, -1258, -830, -1450, -329, -1377, 217, -990, 816)

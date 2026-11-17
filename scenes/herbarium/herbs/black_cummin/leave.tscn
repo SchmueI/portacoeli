@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c87my6wvrtqc3"]
+
+[ext_resource type="Script" uid="uid://p8ai0ko3j3oj" path="res://scripts/classes/DragableObject.gd" id="1_jetr4"]
+[ext_resource type="Texture2D" uid="uid://yycg626t3gqj" path="res://assets/textures/levels/herbarium/herbs/black_cumin/puzzle/leave.png" id="2_rxhbk"]
+
+[node name="Leave" type="Node2D" unique_id=570058146]
+script = ExtResource("1_jetr4")
+metadata/_custom_type_script = "uid://p8ai0ko3j3oj"
+
+[node name="LeaveSprite" type="Sprite2D" parent="." unique_id=2049227623]
+texture = ExtResource("2_rxhbk")
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=1002605447]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TouchArea" unique_id=1291058320]
+polygon = PackedVector2Array(930, 1050, 1304, 1477, 1544, 1426, 1541, 1153, 899, 380, 1478, -72, 1278, -242, 649, 64, 553, -282, 1137, -686, 1026, -909, 480, -689, 917, -1637, 636, -1766, 128, -995, -71, -1523, -301, -1293, -233, -886, -521, -1050, -994, -1065, -1436, -1078, -1486, -818, -1037, -580, -1130, -429, -695, -315, -1115, -249, -839, 127, -112, 137, -150, 271, -784, 451, -1186, 582, -1135, 838, -845, 812, -420, 678, -799, 1426, -551, 1575, -407, 1247, -228, 1578, -91, 1540, -112, 1343, 93, 1646, 437, 1760, 664, 1487)

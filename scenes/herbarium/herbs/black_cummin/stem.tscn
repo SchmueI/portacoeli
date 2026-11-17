@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bw4axti486p6j"]
+
+[ext_resource type="Script" uid="uid://p8ai0ko3j3oj" path="res://scripts/classes/DragableObject.gd" id="1_7q08x"]
+[ext_resource type="Texture2D" uid="uid://bx8511e14s05" path="res://assets/textures/levels/herbarium/herbs/black_cumin/puzzle/stem.png" id="2_yhb6l"]
+
+[node name="Stem" type="Node2D" unique_id=1654369990]
+script = ExtResource("1_7q08x")
+metadata/_custom_type_script = "uid://p8ai0ko3j3oj"
+
+[node name="StemSprite" type="Sprite2D" parent="." unique_id=2049227623]
+texture = ExtResource("2_yhb6l")
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=1002605447]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TouchArea" unique_id=1240950069]
+polygon = PackedVector2Array(-202, 713, 94, 1372, 179, 1945, 304, 2052, 541, 1895, 734, -2022, 103, -2022, 170, 570, -390, -1937, -654, -1507, -609, -397, -211, 642, -215, 673)

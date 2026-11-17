@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://rbq1y4kl016q"]
+
+[ext_resource type="Texture2D" uid="uid://bl4uh2wu8c6kt" path="res://assets/textures/levels/herbarium/herbs/dog_rose/puzzle/stem.png" id="1_3yome"]
+
+[node name="Stem" type="Node2D" unique_id=646264261]
+
+[node name="StemSprite" type="Sprite2D" parent="." unique_id=2049227623]
+texture = ExtResource("1_3yome")
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=1002605447]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TouchArea" unique_id=1240950069]
+polygon = PackedVector2Array(-418, 2011, -284, 2021, -220, 1880, -173, 1442, 76, 1190, 682, 773, 426, 665, 645, 366, 1166, 171, 1180, -17, 678, 46, 433, -48, 157, 396, -176, 63, -149, -448, 211, -956, 426, -1084, 325, -1279, -193, -1134, -284, -1625, -65, -1952, -290, -1990, -583, -1744, -956, -1442, -1060, -1159, -462, -944, -845, -934, -653, -436, -1087, -416, -1299, -187, -939, 173, -778, 671, -693, 933, -524, 1434)

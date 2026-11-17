@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b8biycaupyy80"]
+
+[ext_resource type="Script" uid="uid://csvmymmkf5l1j" path="res://scenes/herbarium/classes/herb_view.gd" id="1_tbk2s"]
+[ext_resource type="Texture2D" uid="uid://bguha5ox6kauc" path="res://assets/textures/levels/herbarium/herbs/black_cumin/assemble/stem.png" id="2_agmpb"]
+[ext_resource type="Texture2D" uid="uid://djbjgwxvf1y5q" path="res://assets/textures/levels/herbarium/herbs/black_cumin/assemble/bloom.png" id="3_7tfdq"]
+[ext_resource type="Texture2D" uid="uid://b4f7dlufrvsdn" path="res://assets/textures/levels/herbarium/herbs/black_cumin/assemble/leaves.png" id="4_6f0sa"]
+[ext_resource type="Texture2D" uid="uid://ry4iv618fypd" path="res://assets/textures/levels/herbarium/herbs/black_cumin/assemble/stem_bloom.png" id="5_cudsl"]
+[ext_resource type="Texture2D" uid="uid://b2xodhk6r2oc4" path="res://assets/textures/levels/herbarium/herbs/black_cumin/assemble/stem_leaves.png" id="6_t7ukh"]
+[ext_resource type="Texture2D" uid="uid://0xx27e24e17h" path="res://assets/textures/levels/herbarium/herbs/black_cumin/assemble/bloom_leaves.png" id="7_3m87d"]
+[ext_resource type="Texture2D" uid="uid://cyftpnhi50737" path="res://assets/textures/levels/herbarium/herbs/black_cumin/assemble/complete.png" id="8_45kcx"]
+
+[node name="BlackCummin" type="Node2D" unique_id=288837872]
+script = ExtResource("1_tbk2s")
+stem = ExtResource("2_agmpb")
+bloom = ExtResource("3_7tfdq")
+leaves = ExtResource("4_6f0sa")
+stem_bloom = ExtResource("5_cudsl")
+stem_leaves = ExtResource("6_t7ukh")
+bloom_leaves = ExtResource("7_3m87d")
+complete = ExtResource("8_45kcx")
+metadata/_custom_type_script = "uid://csvmymmkf5l1j"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1613854442]

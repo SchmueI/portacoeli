@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bbkjewv2qhtyl"]
+
+[ext_resource type="Script" uid="uid://csvmymmkf5l1j" path="res://scenes/herbarium/classes/herb_view.gd" id="1_xq4vn"]
+[ext_resource type="Texture2D" uid="uid://bh412t4mkr83p" path="res://assets/textures/levels/herbarium/herbs/dog_rose/assemble/stem.png" id="2_h5fcd"]
+[ext_resource type="Texture2D" uid="uid://bo72xxrdg71sd" path="res://assets/textures/levels/herbarium/herbs/dog_rose/assemble/bloom.png" id="3_a03n5"]
+[ext_resource type="Texture2D" uid="uid://q86dq45vqtad" path="res://assets/textures/levels/herbarium/herbs/dog_rose/assemble/leaves.png" id="4_f34mt"]
+[ext_resource type="Texture2D" uid="uid://dvm6bta4vg2ov" path="res://assets/textures/levels/herbarium/herbs/dog_rose/assemble/stem_bloom.png" id="5_6tn0x"]
+[ext_resource type="Texture2D" uid="uid://boveti3duxmdm" path="res://assets/textures/levels/herbarium/herbs/dog_rose/assemble/stem_leaves.png" id="6_8hg7b"]
+[ext_resource type="Texture2D" uid="uid://bt5ldtg66pudp" path="res://assets/textures/levels/herbarium/herbs/dog_rose/assemble/bloom_leaves.png" id="7_sl61o"]
+[ext_resource type="Texture2D" uid="uid://bqenxy87lreia" path="res://assets/textures/levels/herbarium/herbs/dog_rose/assemble/complete.png" id="8_eoc8o"]
+
+[node name="DogRose" type="Node2D" unique_id=477610714]
+script = ExtResource("1_xq4vn")
+stem = ExtResource("2_h5fcd")
+bloom = ExtResource("3_a03n5")
+leaves = ExtResource("4_f34mt")
+stem_bloom = ExtResource("5_6tn0x")
+stem_leaves = ExtResource("6_8hg7b")
+bloom_leaves = ExtResource("7_sl61o")
+complete = ExtResource("8_eoc8o")
+metadata/_custom_type_script = "uid://csvmymmkf5l1j"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1654019731]

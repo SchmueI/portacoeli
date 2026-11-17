@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://vmvifhfhupbe"]
+
+[ext_resource type="Script" uid="uid://p8ai0ko3j3oj" path="res://scripts/classes/DragableObject.gd" id="1_nlvpi"]
+[ext_resource type="Texture2D" uid="uid://1ew08hr5f4wd" path="res://assets/textures/levels/herbarium/herbs/dog_rose/puzzle/bloom.png" id="2_5tfdc"]
+
+[node name="Bloom" type="Node2D" unique_id=818168927]
+script = ExtResource("1_nlvpi")
+metadata/_custom_type_script = "uid://p8ai0ko3j3oj"
+
+[node name="BloomSprite" type="Sprite2D" parent="." unique_id=789624393]
+texture = ExtResource("2_5tfdc")
+
+[node name="TouchArea" type="Area2D" parent="." unique_id=1002605447]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TouchArea" unique_id=1240950069]
+polygon = PackedVector2Array(290, 998, 669, 1132, 1125, 973, 1318, 713, 1480, 481, 1287, 163, 1015, 111, 1287, -253, 1168, -562, 951, -651, 893, -849, 669, -993, 232, -880, 131, -1250, -150, -1391, -465, -1250, -679, -1296, -909, -1088, -964, -712, -878, -504, -1303, -492, -1444, -275, -1425, 1, -1343, 362, -1003, 609, -957, 796, -872, 995, -566, 1303, -58, 1383, 263, 1306)
