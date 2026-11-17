@@ -16,4 +16,26 @@ var Rosemary = {
 	"info"	:	TEXT.rosemary
 }
 
-var HerbList = [Rosemary]
+var Black_cummin = {
+	"name"	:	"blackcummin",
+	"parts" :	{
+		"bloom" : load("res://scenes/herbarium/herbs/black_cummin/bloom.tscn"),
+		"stem": load("res://scenes/herbarium/herbs/black_cummin/stem.tscn"),
+		"leaves" : load("res://scenes/herbarium/herbs/black_cummin/leave.tscn")
+	},
+	"set": load("res://scenes/herbarium/herbs/black_cummin/black_cummin.tscn"),
+	"info"	:	TEXT.black_cumin
+}
+
+var Dog_rose = {
+	"name"	:	"dogrose",
+	"parts" :	{
+		"bloom" : load("res://scenes/herbarium/herbs/dog_rose/bloom.tscn"),
+		"stem": load("res://scenes/herbarium/herbs/dog_rose/stem.tscn"),
+		"leaves" : load("res://scenes/herbarium/herbs/dog_rose/leave.tscn")
+	},
+	"set": load("res://scenes/herbarium/herbs/dog_rose/dog_rose.tscn"),
+	"info"	:	TEXT.black_cumin
+}
+
+var HerbList = [Rosemary, Black_cummin, Dog_rose]
