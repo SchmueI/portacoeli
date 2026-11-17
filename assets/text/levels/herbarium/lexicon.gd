@@ -1,5 +1,6 @@
 extends RefCounted
 
+
 var rosemary = {
 	"ger": {
 		"Name"					:	"Rosmarin",
@@ -51,5 +52,115 @@ var rosemary = {
 		"Utilisation"			:	"aromate, plante médicinale, \nplante ornementale",
 		"Conservation"			:	"frais, séché, congelé",
 		#"Bon voisinage"			:	"sauge, lavande, origan"
+	}
+}
+
+
+var black_cumin = {
+	"ger": {
+		"Name"					:	"Schwarzkümmel",
+		#"Lateinischer Name"		:	"Nigella sativa",
+		"Pflanzenfamilie"		:	"Hahnenfußgewächse",
+		"Standort"				:	"sonnig, warm",
+		"Boden"					:	"locker, humos, \ngut durchlässig",
+		#"Wasserbedarf"			:	"mäßig, Staunässe meiden",
+		"Lebensdauer"			:	"einjährig",
+		"Aussehen"				:	"fein geteilte Blätter;\nweiße bis bläuliche Blüten;\nauffällige Samenkapseln",
+		"Blattanordnung"		:	"wechselständig",
+		"Blüte"					:	"Juni - August",
+		#"Essbare Pflanzenteile"	: 	"Samen",
+		#"Erntezeit"				:	"August - September",
+		"Nutzung"				:	"Gewürz, Arznei, Zierpflanze",
+		"Lagerfähigkeit"		:	"getrocknet, kühl, \ntrocken gelagert",
+		#"verträgt sich mit"		:	"Dill, Kamille, Ringelblume"
+	},
+	"eng" : {
+		"Name"					:	"Black cumin",
+		#"Latin Name"			:	"Nigella sativa",
+		"Plant Family"			:	"Buttercup family",
+		"Location"				:	"sunny, warm",
+		"Soil"					:	"loose, fertile, \nwell-drained",
+		#"Water Requirements"	:	"moderate, avoid waterlogging",
+		"Lifespan"				:	"annual",
+		"Appearance"			:	"finely divided leaves;\nwhite to pale blue flowers;\ndistinct seed capsules",
+		"Leaf Arrangement"		:	"alternate",
+		"Flowering"				:	"June - August",
+		#"Edible Parts"			:	"seeds",
+		#"Harvest Time"			:	"August - September",
+		"Uses"					:	"spice, medicinal plant, \nornamental plant",
+		"Storage"				:	"dried, cool, \nstored dry",
+		#"Companion Plants"		:	"dill, chamomile, calendula"
+	},
+	"fr" : {
+		"Name"					:	"Nigelle cultivée",
+		#"Nom latin"				:	"Nigella sativa",
+		"Famille"				:	"Renonculacées",
+		"Emplacement"			:	"ensoleillé, chaud",
+		"Sol"					:	"meuble, humifère, \nbien drainé",
+		#"Besoins en eau"		:	"modérés, éviter l'eau stagnante",
+		"Durée de vie"			:	"annuelle",
+		"Aspect"				:	"feuilles finement découpées ;\nfleurs blanches à bleu pâle ;\ncapsules bien visibles",
+		"Disposition des feuilles":"alterne",
+		"Floraison"				:	"juin - août",
+		#"Parties comestibles"	:	"graines",
+		#"Période de récolte"	:	"août - septembre",
+		"Utilisation"			:	"épice, plante médicinale, \nplante ornementale",
+		"Conservation"			:	"séché, au frais, \nau sec",
+		#"Bon voisinage"			:	"aneth, camomille, souci"
+	}
+}
+
+
+var dog_rose = {
+	"ger": {
+		"Name"					:	"Hundsrose",
+		#"Lateinischer Name"		:	"Rosa canina",
+		"Pflanzenfamilie"		:	"Rosengewächse",
+		"Standort"				:	"sonnig bis halbschattig",
+		"Boden"					:	"humos, durchlässig, \nmäßig trocken",
+		#"Wasserbedarf"			:	"gering bis mäßig",
+		"Lebensdauer"			:	"mehrjährig",
+		"Aussehen"				:	"gefiederte Blätter;\nrosa bis weiße Blüten;\nrote Hagebutten",
+		"Blattanordnung"		:	"wechselständig",
+		"Blüte"					:	"Mai - Juli",
+		#"Essbare Pflanzenteile"	: 	"Blüten, Hagebutten",
+		#"Erntezeit"				:	"Mai - November",
+		"Nutzung"				:	"Nahrung, Arznei, Zierpflanze",
+		"Lagerfähigkeit"		:	"frisch, getrocknet, \ntiefgefroren",
+		#"verträgt sich mit"		:	"Salbei, Lavendel, Thymian"
+	},
+	"eng" : {
+		"Name"					:	"Dog rose",
+		#"Latin Name"			:	"Rosa canina",
+		"Plant Family"			:	"Rose family",
+		"Location"				:	"sunny to partly shaded",
+		"Soil"					:	"fertile, well-drained, \nmoderately dry",
+		#"Water Requirements"	:	"low to moderate",
+		"Lifespan"				:	"perennial",
+		"Appearance"			:	"pinnate leaves;\npink to white flowers;\nred rose hips",
+		"Leaf Arrangement"		:	"alternate",
+		"Flowering"				:	"May - July",
+		#"Edible Parts"			:	"petals, rose hips",
+		#"Harvest Time"			:	"May - November",
+		"Uses"					:	"food, medicinal plant, \nornamental plant",
+		"Storage"				:	"fresh, dried, frozen",
+		#"Companion Plants"		:	"sage, lavender, thyme"
+	},
+	"fr" : {
+		"Name"					:	"Églantier",
+		#"Nom latin"				:	"Rosa canina",
+		"Famille"				:	"Rosacées",
+		"Emplacement"			:	"ensoleillé à mi-ombragé",
+		"Sol"					:	"humifère, drainé, \nmodérément sec",
+		#"Besoins en eau"		:	"faibles à modérés",
+		"Durée de vie"			:	"vivace",
+		"Aspect"				:	"feuilles pennées ;\nfleurs roses à blanches ;\ncynorrhodons rouges",
+		"Disposition des feuilles":"alterne",
+		"Floraison"				:	"mai - juillet",
+		#"Parties comestibles"	:	"pétales, cynorrhodons",
+		#"Période de récolte"	:	"mai - novembre",
+		"Utilisation"			:	"aliment, plante médicinale, \nplante ornementale",
+		"Conservation"			:	"frais, séché, congelé",
+		#"Bon voisinage"			:	"sauge, lavande, thym"
 	}
 }
