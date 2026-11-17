@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://csvmymmkf5l1j" path="res://scenes/herbarium/classes/herb_view.gd" id="1_0odj1"]
 [ext_resource type="Texture2D" uid="uid://yjngqr7iesms" path="res://assets/textures/levels/herbarium/herbs/rosemary/puzzle/stem.png" id="2_3hrxt"]
-[ext_resource type="Texture2D" uid="uid://2itrtxtql65j" path="res://assets/textures/levels/herbarium/herbs/rosemary/puzzle/bloom.png" id="3_i60or"]
+[ext_resource type="Texture2D" uid="uid://csd2q0q0lxb50" path="res://assets/textures/levels/herbarium/herbs/rosemary/assemble/bloom.png" id="3_3hrxt"]
 [ext_resource type="Texture2D" uid="uid://btii01kdk1wf4" path="res://assets/textures/levels/herbarium/herbs/rosemary/assemble/leaves.png" id="4_1gtty"]
 [ext_resource type="Texture2D" uid="uid://d0o7amhb0c1na" path="res://assets/textures/levels/herbarium/herbs/rosemary/assemble/stem_bloom.png" id="5_4gp6q"]
 [ext_resource type="Texture2D" uid="uid://bi0tdw6juuymv" path="res://assets/textures/levels/herbarium/herbs/rosemary/assemble/stem_leaves.png" id="6_ortb2"]
@@ -12,7 +12,7 @@
 [node name="Rosemary" type="Node2D" unique_id=380025777]
 script = ExtResource("1_0odj1")
 stem = ExtResource("2_3hrxt")
-bloom = ExtResource("3_i60or")
+bloom = ExtResource("3_3hrxt")
 leaves = ExtResource("4_1gtty")
 stem_bloom = ExtResource("5_4gp6q")
 stem_leaves = ExtResource("6_ortb2")
