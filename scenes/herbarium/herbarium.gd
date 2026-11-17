@@ -98,18 +98,6 @@ func init_level() -> void:
 	load_elements(elements)
 	
 
-func _on_check_clicked() -> void:
-	var goal = herbariumcontroller.get_goal()
-	var groupname = goal["name"]
-	var parts : Array[String] = []
-	for part in goal["parts"]:
-		parts.append(part)
-		
-	if CombinationChecker.check_valid_combination(groupname, parts, herbs.get_children()):
-		_handle_correct_solution(groupname)
-	else:
-		_handle_incorrect_solution()
-		
 func _handle_correct_solution(groupname) -> void:
 	
 	herbariumcontroller.score(groupname)
