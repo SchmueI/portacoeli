@@ -23,7 +23,7 @@ texture = ExtResource("1_8cn40")
 
 [node name="SpawnArea" type="Polygon2D" parent="." unique_id=383713349]
 color = Color(1, 1, 1, 0)
-polygon = PackedVector2Array(74, 151, 69, 517, 243, 488, 380, 550, 508, 509, 843, 518, 963, 477, 1199, 395, 1199, 263, 832, 255, 832, 18, 269, 28, 277, 88)
+polygon = PackedVector2Array(74, 151, 69, 517, 367, 519, 371, 707, 832, 698, 958, 558, 1091, 554, 1199, 395, 1199, 263, 832, 255, 832, 18, 269, 28, 277, 88)
 
 [node name="Target" parent="." unique_id=1795348866 instance=ExtResource("9_v4ps5")]
 position = Vector2(628.00006, 307.00003)
