@@ -59,11 +59,12 @@ wait_time = 0.3
 script = ExtResource("9_djl5n")
 metadata/_custom_type_script = "uid://c1wlc7s55wjt3"
 
-[node name="TutorialController" type="Node" parent="." unique_id=850342149 node_paths=PackedStringArray("popup_controller", "movement_controller", "highlight_controller", "herbarium")]
+[node name="TutorialController" type="Node" parent="." unique_id=850342149 node_paths=PackedStringArray("popup_controller", "movement_controller", "highlight_controller", "herbarium_controller", "herbarium")]
 script = ExtResource("10_djl5n")
 popup_controller = NodePath("../PopupController")
 movement_controller = NodePath("../MovementController")
 highlight_controller = NodePath("../HighlightController")
+herbarium_controller = NodePath("../HerbariumController")
 herbarium = NodePath("..")
 metadata/_custom_type_script = "uid://cr02kb8646so3"
 

@@ -11,7 +11,7 @@ enum BoundaryMode {
 @export var dragScale: float = 0.2
 @export var boundary_mode: BoundaryMode = BoundaryMode.NONE
 
-signal moved
+signal moved(element)
 
 var drag_offset: Vector2 = Vector2.ZERO
 
@@ -41,7 +41,7 @@ func _on_drag_finished(_event: InputEventScreenTouch) -> void:
 
 	position = get_valid_position(position)
 
-	moved.emit()
+	moved.emit(self)
 
 
 func get_touch_position_in_parent(viewport_position: Vector2) -> Vector2:

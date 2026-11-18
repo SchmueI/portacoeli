@@ -99,7 +99,7 @@ func _on_button_back_clicked() -> void:
 func _on_herbarium_button_clicked() -> void:
 	open_preview("herbarium")
 
-func _on_map_moved() -> void:
+func _on_map_moved(_element) -> void:
 	savemanager.modify_data({"mapposition":$Map.position})
 
 

@@ -5,6 +5,7 @@ extends Node
 @export var popup_controller: PopupController
 @export var movement_controller: MovementController
 @export var highlight_controller: HighlightController
+@export var herbarium_controller: HerbariumController
 
 @export var herbarium: herbariumgame
 
@@ -235,18 +236,21 @@ func scene_step(tutorial:NotificationPopup) -> void:
 	
 func move_parts(popup:NotificationPopup) -> void:
 	herbarium.spawn_elements()
+	herbarium_controller.disconnect_part_signals()
 	for child in herbarium.herbs.get_children():
 		child.touch_enabled = true
 		child.moved.connect(part_moved.bind(popup))
 
-func part_moved(popup:NotificationPopup) -> void:
+func part_moved(_part, popup:NotificationPopup) -> void:
 	for child in herbarium.herbs.get_children():
-		child.moved.disconnect(part_moved)
+		child.moved.disconnect(part_moved.bind(popup))
 		movement_controller.move_element(
 			child,
 			herbarium.inipos,
 			0.5
 		)
+		
+	herbarium_controller.connect_part_signals()
 		
 	var timer = Timer.new()
 	add_child(timer)

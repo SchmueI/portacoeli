@@ -68,10 +68,12 @@ func next_level() -> void:
 
 func connect_part_signals() -> void:
 	for child in parts.get_children():
-		child.moved.connect(
-			func():
-				part_moved(child)
-		)
+		child.moved.connect(part_moved)
+
+func disconnect_part_signals() -> void:
+	for child in parts.get_children():
+		if child.moved.is_connected(part_moved):
+			child.moved.disconnect(part_moved)
 	
 func part_moved(part):
 	var targetArea = target.get_child(1)
