@@ -22,3 +22,4 @@ intScale = 0.15
 metadata/_custom_type_script = "uid://csvmymmkf5l1j"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1769099145]
+scale = Vector2(4, 4)

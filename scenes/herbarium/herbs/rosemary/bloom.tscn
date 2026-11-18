@@ -10,7 +10,7 @@ dragScale = 0.02
 metadata/_custom_type_script = "uid://p8ai0ko3j3oj"
 
 [node name="BloomSprite" type="Sprite2D" parent="." unique_id=432850645]
-scale = Vector2(2, 2)
+scale = Vector2(8, 8)
 texture = ExtResource("2_lb6pr")
 
 [node name="TouchArea" type="Area2D" parent="." unique_id=1706730192]

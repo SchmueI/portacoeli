@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dyjnqyivr241c"]
 
 [ext_resource type="Script" uid="uid://p8ai0ko3j3oj" path="res://scripts/classes/DragableObject.gd" id="1_puixk"]
-[ext_resource type="Texture2D" uid="uid://yjngqr7iesms" path="res://assets/textures/levels/herbarium/herbs/rosemary/stem.png" id="2_wv80h"]
+[ext_resource type="Texture2D" uid="uid://yjngqr7iesms" path="res://assets/textures/levels/herbarium/herbs/rosemary/puzzle/stem.png" id="2_wv80h"]
 
 [node name="Stem" type="Node2D" unique_id=1319938586]
 script = ExtResource("1_puixk")
@@ -10,6 +10,7 @@ dragScale = 0.08
 metadata/_custom_type_script = "uid://p8ai0ko3j3oj"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1817462232]
+scale = Vector2(4, 4)
 texture = ExtResource("2_wv80h")
 
 [node name="TouchArea" type="Area2D" parent="." unique_id=396326677]

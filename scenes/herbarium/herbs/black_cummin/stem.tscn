@@ -13,4 +13,5 @@ texture = ExtResource("2_yhb6l")
 [node name="TouchArea" type="Area2D" parent="." unique_id=1002605447]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TouchArea" unique_id=1240950069]
+scale = Vector2(0.25, 0.25)
 polygon = PackedVector2Array(-202, 713, 94, 1372, 179, 1945, 304, 2052, 541, 1895, 734, -2022, 103, -2022, 170, 570, -390, -1937, -654, -1507, -609, -397, -211, 642, -215, 673)
