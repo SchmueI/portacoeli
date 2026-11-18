@@ -4,6 +4,9 @@ extends Node
 var goal : Dictionary = {}
 var assembled : Array[String]
 
+var pieces:Array[Herb]
+var part_z
+
 var savemanager = SaveManager.new()
 @export var herbarium:herbariumgame
 @export var parts:Node2D
@@ -65,6 +68,7 @@ func next_level() -> void:
 	goal = select_goal(herblist)
 	herbarium.HERBS = herblist
 	assembled = []
+	pieces = []
 
 func connect_part_signals() -> void:
 	for child in parts.get_children():
@@ -90,18 +94,32 @@ func get_part_name(part):
 	return null
 	
 func handle_correct_insertion(part:Herb):
+	part_z = part.z_index
 	var part_name = get_part_name(part)
 	if not part_name in assembled:
 		assembled.append(part_name)
-		var dic = get_dictionary()
-		for child in herbviewer.get_children():
-			child.set_state(dic)
-	part.queue_free()
+		update_herbview()
+	
+	part.z_index = -100
+	pieces.append(part)
 			
 func handle_incorrect_insertion(part:Herb):
 	part.get_damage()
+	for piece in pieces:
+		piece.z_index = part_z
+		piece.get_damage()
+	pieces.append(part)
+	herbarium.shuffle(pieces)
+	pieces = []
+	assembled = []
+	update_herbview()
 	pass
-	
+
+func update_herbview():
+	var dic = get_dictionary()
+	for child in herbviewer.get_children():
+		child.set_state(dic)
+
 func get_dictionary() -> Dictionary:
 	var dic := {}
 	for i in assembled:

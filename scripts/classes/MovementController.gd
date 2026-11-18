@@ -31,6 +31,19 @@ func fade_element(
 	
 	tween.tween_property(element, "position", target_position, duration)
 	tween.parallel().tween_property(element, "scale", scale, duration)
+	
+func rotate_element(
+	element			: Node2D,
+	target_rotation : float,
+	duration		: float
+) -> void:
+	var tween = create_tween()
+	tween.tween_property(
+		element, 
+		"rotation_degrees", 
+		element.rotation_degrees + target_rotation,
+		duration
+	)
 
 func _get_valid_target(element:Node2D, target_position: Vector2) -> Vector2:
 	if element is DragableObject:

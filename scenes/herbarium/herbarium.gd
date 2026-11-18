@@ -144,25 +144,26 @@ func _on_book_closed() -> void:
 	toggle_scene_touch(true)
 	
 func _on_button_reload_clicked() -> void:
-	shuffle()
-		
-		
-
-func shuffle() -> void:
-	var elements = herbs.get_children()
-	var sticked = CombinationChecker.get_elements_in_target_area($Target/TargetArea, elements)
-	for s in sticked:
-		elements.erase(s)
-	for child in elements:
-		var pos = get_random_spawn_position(spawn_polygon, [$Target/Boundaries])
-		var time = RNG.randf_range(0.5,0.9)
-		$MovementController.move_element(child, pos, time)
-		
-func shuffle_all() -> void:
+	var list = []
 	for child in herbs.get_children():
-		var pos = get_random_spawn_position(spawn_polygon, [$Target/Boundaries])
-		var time = RNG.randf_range(0.5,0.9)
-		$MovementController.move_element(child, pos, time)
+		if child.z_index > -100:
+			list.append(child)
+	shuffle(list)
+
+func shuffle(list:Array=[]) -> void:
+	if list == []:
+		for child in herbs.get_children():
+			execute_shuffle(child)
+	else:
+		for entity in list:
+			execute_shuffle(entity)
+
+func execute_shuffle(element):
+	var pos = get_random_spawn_position(spawn_polygon, [$Target/Boundaries])
+	var time = RNG.randf_range(0.5,0.9)
+	var rot = RNG.randf_range(-180,180)
+	$MovementController.move_element(element, pos, time)
+	$MovementController.rotate_element(element, rot, time)
 	
 func _on_button_back_clicked() -> void:
 	var Level : PackedScene = load("res://scenes/levelSelector/levelSelector.tscn")
@@ -174,7 +175,7 @@ func spawn_elements() -> void:
 	var timer = Timer.new()
 	add_child(timer)
 	timer.timeout.connect(func():
-		shuffle_all()
+		shuffle()
 		timer.queue_free()
 	)
 	timer.one_shot = true
