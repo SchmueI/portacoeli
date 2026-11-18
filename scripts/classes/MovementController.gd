@@ -37,7 +37,11 @@ func rotate_element(
 	target_rotation : float,
 	duration		: float
 ) -> void:
+	
 	var tween = create_tween()
+	tween.set_ease(Tween.EASE_OUT)
+	tween.set_trans(Tween.TRANS_SINE)
+	
 	tween.tween_property(
 		element, 
 		"rotation_degrees", 
