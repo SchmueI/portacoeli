@@ -14,8 +14,6 @@ func move_element(
 	if ease_out and 	ease_in	: tween.set_ease(Tween.EASE_IN_OUT)
 	if ease_out or 		ease_in : tween.set_trans(Tween.TRANS_SINE)
 	
-	print (element)
-	
 	target_position = _camera_to_parent(element, target_position)
 	target_position = _get_valid_target(element, target_position)
 	
@@ -44,7 +42,6 @@ func _camera_to_parent(
 	element: Node2D,
 	target_position: Vector2
 ) -> Vector2:
-	print (element)
 	var parent_canvas := element.get_parent() as CanvasItem
 	if not parent_canvas == null:
 		return parent_canvas.make_canvas_position_local(target_position)
