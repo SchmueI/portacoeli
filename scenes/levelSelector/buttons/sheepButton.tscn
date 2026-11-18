@@ -8,6 +8,7 @@ script = ExtResource("1_026jw")
 metadata/_custom_type_script = "uid://dppjvot3bqvcf"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=347572450]
+scale = Vector2(4, 4)
 texture = ExtResource("2_3iwoa")
 
 [node name="TouchArea" type="Area2D" parent="." unique_id=1510712007]
