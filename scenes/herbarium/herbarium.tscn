@@ -11,8 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://b4n7vv8mjssy8" path="res://scenes/herbarium/interface/buttonBook.tscn" id="12_0po5q"]
 [ext_resource type="Script" uid="uid://cfnl72cnjjeqc" path="res://scripts/classes/HighlightController.gd" id="12_w4uah"]
 [ext_resource type="Script" uid="uid://cwm2f1k20ids4" path="res://scenes/herbarium/classes/HerbariumController.gd" id="13_5qdp2"]
-[ext_resource type="PackedScene" uid="uid://b41fy4f6aj17b" path="res://scenes/herbarium/interface/buttonCheck.tscn" id="13_ugkig"]
-[ext_resource type="Script" uid="uid://bula58yx8ab4d" path="res://scenes/herbarium/interface/button_check.gd" id="15_5qdp2"]
 
 [node name="Herbarium" type="Node2D" unique_id=2027710954]
 script = ExtResource("1_wwwpb")
@@ -39,17 +37,12 @@ scale = Vector2(0.35, 0.35)
 position = Vector2(182, 614)
 scale = Vector2(0.3, 0.3)
 
-[node name="ButtonCheck" parent="." unique_id=402333780 groups=["UI"] instance=ExtResource("13_ugkig")]
-position = Vector2(1080, 605)
-scale = Vector2(0.3, 0.3)
-script = ExtResource("15_5qdp2")
-
 [node name="ButtonReload" parent="." unique_id=739808759 groups=["UI"] instance=ExtResource("7_x5ofh")]
-position = Vector2(517, 611)
+position = Vector2(1023.9999, 638)
 scale = Vector2(0.18, 0.18)
 
 [node name="ButtonBack" parent="." unique_id=1161179332 groups=["UI"] instance=ExtResource("8_38s7k")]
-position = Vector2(754, 609)
+position = Vector2(1197, 567)
 scale = Vector2(0.18, 0.18)
 
 [node name="ButtonTimer" type="Timer" parent="." unique_id=535674207]
@@ -85,8 +78,5 @@ herbviewer = NodePath("../Target/HerbViewer")
 metadata/_custom_type_script = "uid://cwm2f1k20ids4"
 
 [connection signal="clicked" from="ButtonBook" to="." method="_on_button_book_clicked"]
-[connection signal="clicked" from="ButtonCheck" to="." method="_on_check_clicked"]
-[connection signal="clicked" from="ButtonCheck" to="ButtonCheck" method="_on_clicked"]
 [connection signal="clicked" from="ButtonReload" to="." method="_on_button_reload_clicked"]
 [connection signal="clicked" from="ButtonBack" to="." method="_on_button_back_clicked"]
-[connection signal="timeout" from="ButtonTimer" to="ButtonCheck" method="_on_button_timer_timeout"]

@@ -8,17 +8,14 @@ var inipos			: Vector2 			= Vector2(182,614)
 var pos_box:Vector2
 var pos_book:Vector2
 var pos_reload:Vector2
-var pos_check:Vector2
 
 var z_box		: int
 var z_book		: int
 var z_reload	: int
-var z_check		: int
 
 var scl_box		: Vector2
 var scl_book	: Vector2
 var scl_reload	: Vector2
-var scl_check	: Vector2
 
 var boxpath		: String
 
@@ -43,15 +40,12 @@ func _ready() -> void:
 	
 	pos_book 	= $ButtonBook	.position
 	pos_reload 	= $ButtonReload	.position
-	pos_check 	= $ButtonCheck	.position
 	
 	z_book 		= $ButtonBook	.z_index
 	z_reload 	= $ButtonReload	.z_index
-	z_check 	= $ButtonCheck	.z_index
 	
 	scl_book	= $ButtonBook	.scale
 	scl_reload	= $ButtonReload	.scale
-	scl_check	= $ButtonCheck	.scale
 	
 	init_level()
 	

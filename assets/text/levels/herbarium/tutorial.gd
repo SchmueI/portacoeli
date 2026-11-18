@@ -85,26 +85,6 @@ var data = {
 	},
 	"4":{
 		"ger":{
-			"Headline":"Prüfen",
-			"Text":"Wenn du diesen Knopf drückst wird überprüft, ob du alle Pflanzenteile korrekt zusammengesetzt hast. Sie wandern dann in dein Herbarium.",
-			"Heavy":true,
-			"Highlight":"check"
-		},
-		"eng":{
-			"Headline":"Check",
-			"Text":"Press this button to check whether you have assembled all the plant parts correctly. If everything is correct, the plant will be added to your herbarium.",
-			"Heavy":true,
-			"Highlight":"check"
-		},
-		"fr":{
-			"Headline":"Vérifier",
-			"Text":"Appuie sur ce bouton pour vérifier si tu as correctement assemblé toutes les parties de la plante. Si tout est correct, la plante sera ajoutée à ton herbier.",
-			"Heavy":true,
-			"Highlight":"check"
-		}
-	},
-	"5":{
-		"ger":{
 			"Headline":"Bewege ein Pflanzenteil!",
 			"Text":"Ziehe es mit der Maus oder mit dem Finger.",
 			"Heavy":false,
@@ -123,7 +103,7 @@ var data = {
 			"Highlight":"parts"
 		}
 	},
-	"6":{
+	"5":{
 		"ger":{
 			"Headline":"Geschafft!",
 			"Text":"Du hast nun alle wichtigen Funktionen dieses Spiels gelernt. Indem du auf weiter klickst oder dieses Fenster schließt, beginnst du das Spiel.",

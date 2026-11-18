@@ -143,9 +143,6 @@ func highlight_element(element_name:String) -> void:
 	elif element_name == "reload":
 		element = herbarium.get_node("ButtonReload")
 		pos = Vector2(650, 450)
-	elif element_name == "check":
-		element = herbarium.get_node("ButtonCheck")
-		pos = Vector2(650, 500)
 	elif element_name == "all":
 		pass
 	else:
@@ -167,11 +164,6 @@ func highlight_element(element_name:String) -> void:
 		element = herbarium.get_node("ButtonReload")
 		pos = Vector2(650, 475)
 		process_highlight(element, {"pos":pos, "scl":0.1})
-		
-		
-		element = herbarium.get_node("ButtonCheck")
-		pos = Vector2(400, 550)
-		process_highlight(element, {"pos":pos, "scl":0.2})
 
 func process_highlight(element:Node2D, options:Dictionary={}) -> void:
 	
@@ -191,26 +183,22 @@ func restore_highlighting() -> void:
 	var elements = [
 		herbarium.get_node("SEARCHBOX"),
 		herbarium.get_node("ButtonBook"),
-		herbarium.get_node("ButtonReload"),
-		herbarium.get_node("ButtonCheck")
+		herbarium.get_node("ButtonReload")
 	]
 	var positions = [
 		herbarium.pos_box,
 		herbarium.pos_book,
-		herbarium.pos_reload,
-		herbarium.pos_check
+		herbarium.pos_reload
 	]
 	var z = [
 		herbarium.z_box,
 		herbarium.z_book,
-		herbarium.z_reload,
-		herbarium.z_check
+		herbarium.z_reload
 	]
 	var scl = [
 		herbarium.scl_box,
 		herbarium.scl_book,
-		herbarium.scl_reload,
-		herbarium.scl_check
+		herbarium.scl_reload
 	]
 	var i = 0
 	for e in elements:
