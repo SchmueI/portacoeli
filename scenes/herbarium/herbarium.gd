@@ -111,7 +111,7 @@ func _handle_correct_solution(groupname) -> void:
 		var pos = inipos
 		var time = RNG.randf_range(0.7,0.9)
 		var scl = Vector2(node.intScale, node.intScale)
-		$MovementController.fade_element(node, pos, time, scl)
+		$HighlightController.celebrate_element(node,pos,time,scl)
 	
 	var timer = Timer.new()
 	add_child(timer)
