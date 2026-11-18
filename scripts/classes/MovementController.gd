@@ -43,4 +43,7 @@ func _camera_to_parent(
 	target_position: Vector2
 ) -> Vector2:
 	var parent_canvas := element.get_parent() as CanvasItem
-	return parent_canvas.make_canvas_position_local(target_position)
+	if not parent_canvas == null:
+		return parent_canvas.make_canvas_position_local(target_position)
+	else:
+		return target_position
