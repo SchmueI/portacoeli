@@ -35,7 +35,7 @@ var Dog_rose = {
 		"leaves" : load("res://scenes/herbarium/herbs/dog_rose/leave.tscn")
 	},
 	"set": load("res://scenes/herbarium/herbs/dog_rose/dog_rose.tscn"),
-	"info"	:	TEXT.black_cumin
+	"info"	:	TEXT.dog_rose
 }
 
 var HerbList = [Rosemary, Black_cummin, Dog_rose]
