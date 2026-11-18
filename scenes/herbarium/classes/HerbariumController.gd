@@ -75,7 +75,7 @@ func disconnect_part_signals() -> void:
 		if child.moved.is_connected(part_moved):
 			child.moved.disconnect(part_moved)
 	
-func part_moved(part):
+func part_moved(part:Herb):
 	var targetArea = target.get_child(1)
 	var goalname : String = goal["name"]
 	var insertion = CombinationChecker.check_valid_insertion(part, targetArea, goalname)
@@ -89,7 +89,7 @@ func get_part_name(part):
 		if part.is_in_group(p): return p
 	return null
 	
-func handle_correct_insertion(part):
+func handle_correct_insertion(part:Herb):
 	var part_name = get_part_name(part)
 	if not part_name in assembled:
 		assembled.append(part_name)
@@ -98,7 +98,8 @@ func handle_correct_insertion(part):
 			child.set_state(dic)
 	part.queue_free()
 			
-func handle_incorrect_insertion(part):
+func handle_incorrect_insertion(part:Herb):
+	part.get_damage()
 	pass
 	
 func get_dictionary() -> Dictionary:

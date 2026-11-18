@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://dyjnqyivr241c"]
 
-[ext_resource type="Script" uid="uid://p8ai0ko3j3oj" path="res://scripts/classes/DragableObject.gd" id="1_puixk"]
+[ext_resource type="Script" uid="uid://dluaxis8crpu7" path="res://scenes/herbarium/classes/Herb.gd" id="1_wv80h"]
 [ext_resource type="Texture2D" uid="uid://yjngqr7iesms" path="res://assets/textures/levels/herbarium/herbs/rosemary/puzzle/stem.png" id="2_wv80h"]
 
-[node name="Stem" type="Node2D" unique_id=1319938586]
-script = ExtResource("1_puixk")
+[node name="Stem" type="Node2D" unique_id=100930117 node_paths=PackedStringArray("visual")]
+script = ExtResource("1_wv80h")
+visual = NodePath("Sprite2D")
 intScale = 0.056
 dragScale = 0.08
-metadata/_custom_type_script = "uid://p8ai0ko3j3oj"
+metadata/_custom_type_script = "uid://dluaxis8crpu7"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1817462232]
 scale = Vector2(4, 4)

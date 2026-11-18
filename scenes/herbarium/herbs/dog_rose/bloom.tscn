@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://vmvifhfhupbe"]
 
-[ext_resource type="Script" uid="uid://p8ai0ko3j3oj" path="res://scripts/classes/DragableObject.gd" id="1_nlvpi"]
+[ext_resource type="Script" uid="uid://dluaxis8crpu7" path="res://scenes/herbarium/classes/Herb.gd" id="1_5tfdc"]
 [ext_resource type="Texture2D" uid="uid://1ew08hr5f4wd" path="res://assets/textures/levels/herbarium/herbs/dog_rose/puzzle/bloom.png" id="2_5tfdc"]
 
-[node name="Bloom" type="Node2D" unique_id=818168927]
-script = ExtResource("1_nlvpi")
-metadata/_custom_type_script = "uid://p8ai0ko3j3oj"
+[node name="Bloom" type="Node2D" unique_id=1324514213 node_paths=PackedStringArray("visual")]
+script = ExtResource("1_5tfdc")
+visual = NodePath("BloomSprite")
+metadata/_custom_type_script = "uid://dluaxis8crpu7"
 
 [node name="BloomSprite" type="Sprite2D" parent="." unique_id=789624393]
 texture = ExtResource("2_5tfdc")

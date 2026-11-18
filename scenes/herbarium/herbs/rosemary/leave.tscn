@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://x5b21igh3u0e"]
 
-[ext_resource type="Script" uid="uid://p8ai0ko3j3oj" path="res://scripts/classes/DragableObject.gd" id="1_krwj3"]
+[ext_resource type="Script" uid="uid://dluaxis8crpu7" path="res://scenes/herbarium/classes/Herb.gd" id="1_178ve"]
 [ext_resource type="Texture2D" uid="uid://sjq8hekcc2a7" path="res://assets/textures/levels/herbarium/herbs/rosemary/puzzle/leave.png" id="2_178ve"]
 
-[node name="Leave" type="Node2D" unique_id=673809890]
-script = ExtResource("1_krwj3")
+[node name="Leave" type="Node2D" unique_id=2042802490 node_paths=PackedStringArray("visual")]
+script = ExtResource("1_178ve")
+visual = NodePath("Sprite2D")
 intScale = 0.05
 dragScale = 0.077
-metadata/_custom_type_script = "uid://p8ai0ko3j3oj"
+metadata/_custom_type_script = "uid://dluaxis8crpu7"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=219321953]
 scale = Vector2(4, 4)
