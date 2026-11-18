@@ -128,9 +128,6 @@ func next_game():
 	init_level()
 	spawn_elements()
 
-func _handle_incorrect_solution() -> void:
-	$PopupController.init_popup(POPUPS.wrong[lang]["headline"], POPUPS.wrong[lang]["text"])
-
 func _on_button_book_clicked() -> void:
 	var Book : PackedScene = load("res://scenes/herbarium/book/book.tscn")
 	var book = Book.instantiate()
